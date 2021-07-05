@@ -45,7 +45,7 @@ ul {
 }
 
 h1 {
-    margin-top: 128px;
+    margin-top: 68px;
     text-align: center;
     font-size: 28pt;
 }
@@ -78,6 +78,24 @@ p {
     backdrop-filter: blur(42px);
     /* Note: backdrop-filter has minimal browser support */
     margin: 0 64px;
+    border-radius: 12px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    
+    width: 700px;
+    height: 48px;
+    border: 1px solid #fff;
+    background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(42px);
+    /* Note: backdrop-filter has minimal browser support */
+
     border-radius: 12px;
 }
 
