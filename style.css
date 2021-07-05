@@ -8,6 +8,36 @@ body {
     background-size: cover;
 }
 
+.logo {
+    max-width: 46px;
+    max-height:46px;
+}
+
+header {
+    margin: 24px 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+
+    margin: 0 24px;
+}
+
+ul {
+    display:flex;
+    list-style-type: none;
+}
+
+.login {
+    width: 93px;
+    height: 35px;
+    background: #00623B;
+    border-radius: 6px;
+    color: #fff;
+}
+
 h1 {
     margin-top: 128px;
     text-align: center;
