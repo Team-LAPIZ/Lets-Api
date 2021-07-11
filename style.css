@@ -87,15 +87,37 @@ p {
     align-items: center;
 }
 
+.wrapper {
+    position: relative;
+    display: flex;
+    min-width: 100px;
+    height: 48px;
+    width: 662px;
+}
+
 .search {
-    
-    width: 700px;
+    outline: 0;
+
+    width: 100%;
+    padding: 2px 23px 2px 30px;
     height: 48px;
     border: 1px solid #fff;
     background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(42px);
-    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 12px;
+}
 
+
+.button {
+    font-size: 12pt;
+    margin-left: 14px;
+    width: 128px;
+    height: 48px;
+    border: 1px solid rgb(108, 177, 139);
+    background: #00623B;
+    backdrop-filter: blur(42px);
+    /* Note: backdrop-filter has minimal browser support */
+    color: #fff;
     border-radius: 12px;
 }
 
