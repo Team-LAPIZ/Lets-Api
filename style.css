@@ -29,11 +29,13 @@ header {
 li {
 
     margin: 0 24px;
+    cursor: pointer;
 }
 
 ul {
     display:flex;
     list-style-type: none;
+
 }
 
 .login {
@@ -42,12 +44,17 @@ ul {
     background: #00623B;
     border-radius: 6px;
     color: #fff;
+    cursor: pointer;
 }
 
 h1 {
     margin-top: 20px;
     text-align: center;
     font-size: 28pt;
+}
+
+.margin-top {
+    margin-top: 120px;
 }
 
 .container {
@@ -99,7 +106,7 @@ p {
     outline: 0;
     width: 100%;
     padding: 2px 23px 2px 30px;
-    height: 48px;
+    height: 41px;
     border: 1px solid #fff;
     background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(42px);
@@ -110,14 +117,15 @@ p {
 .button {
     font-size: 12pt;
     margin-left: 14px;
-    width: 128px;
-    height: 48px;
+    width: 178px;
+    height: 49px;
     border: 1px solid rgb(108, 177, 139);
     background: #00623B;
     backdrop-filter: blur(42px);
     /* Note: backdrop-filter has minimal browser support */
     color: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .search:hover, .search:focus {
@@ -156,7 +164,7 @@ p {
     color: #fff;
     width: 81px;
     height: 35px;
-    background-color: rgb(138, 138, 138);
+    background-color: rgb(158, 158, 158);
     border-radius: 6px;
     margin-left: 24px;
 }
@@ -170,6 +178,155 @@ p {
     background: #E20000;
     color: white;
 }
+
+.one-viewport-page {
+    overflow: hidden;
+}
+
+.back {
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    top: 50px;
+    left: 50px;
+}
+
+
+.login-container {
+    
+    display: flex;
+    height: 100vh;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 570px;
+    height: 550px;
+    border: 1px solid #fff;
+    background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(42px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    align-items: center;
+    border-radius: 12px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 20px;
+}
+
+.img-input {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-box img {
+    width: 32px;
+    height: 32px;
+    margin: 0 24px;
+}
+
+.wrapper-login {
+    display: flex;
+    min-width: 100px;
+    height: 48px;
+    width: 350px;
+
+}
+
+.login-box button {
+    font-size: 12pt;
+    margin-top: 40px;
+    margin-left: 14px;
+    width: 420px;
+    height: 48px;
+    font-weight: bold;
+    border: 1px solid rgb(108, 177, 139);
+    background: #00623B;
+    backdrop-filter: blur(42px);
+    /* Note: backdrop-filter has minimal browser support */
+    color: #fff;
+    border-radius: 12px;
+}
+
+.login-box button:hover {
+    background: #0e8052;
+}
+
+.forgot-password {
+    position: relative;
+    top: 18px;
+    left: 153px;
+    color: gray;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+}
+
+.login-box p a {
+    color: #00623B;
+    font-weight: bold;
+}
+
+.movie-section {
+    margin: 0 auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.movie-wrapper {
+    display: flex;
+    max-width: 600px;
+    margin-top: 80px;
+}
+
+.poster {
+    max-width: 140px;
+    max-height: 210px;
+    border-radius: 10px;
+}
+
+.movie-text-wrapper {
+    font-size: 10pt;
+    
+    padding: 0 30px;
+    display: flex;
+    max-height: 210px;
+    flex-direction: column;
+    background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(42px);
+    border: 1px solid rgb(108, 177, 139);
+    border-radius:10px;
+}
+
+.judul {
+    font-size: 13pt;
+    color: #00623B;
+    font-weight: 800;
+}
+
+.sinopsis {
+    margin-top: -8px;
+    text-align: left;
+}
+
+.genre {
+    text-align: left;
+}
+
 
 @media (min-width: 576px) { 
     
