@@ -45,7 +45,7 @@ ul {
 }
 
 h1 {
-    margin-top: 68px;
+    margin-top: 20px;
     text-align: center;
     font-size: 28pt;
 }
@@ -97,7 +97,6 @@ p {
 
 .search {
     outline: 0;
-
     width: 100%;
     padding: 2px 23px 2px 30px;
     height: 48px;
@@ -119,6 +118,58 @@ p {
     /* Note: backdrop-filter has minimal browser support */
     color: #fff;
     border-radius: 12px;
+}
+
+.search:hover, .search:focus {
+    border: 1.5px solid #009688;
+    background-color: #ffffff;
+    opacity: 0.8;
+  }
+
+.button:hover {
+    background: #06422a;
+}
+
+.validation-group {
+    margin-top: 36px;
+}
+
+.validation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    text-align: center;
+    max-width: 664px;
+    margin: auto;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.box1 {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+    width: 81px;
+    height: 35px;
+    background: #00623B;
+    border-radius: 6px;
+}
+
+.box2 {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+    width: 81px;
+    height: 35px;
+    background: #E20000;
+    border-radius: 6px;
 }
 
 @media (min-width: 576px) { 
