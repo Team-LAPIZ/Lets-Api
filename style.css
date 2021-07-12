@@ -149,27 +149,26 @@ p {
     
 }
 
-.box1 {
+.box-default {
     display: flex;
     align-items: center;
     justify-content:center;
-    color: white;
+    color: #fff;
     width: 81px;
     height: 35px;
-    background: #00623B;
+    background-color: rgb(138, 138, 138);
     border-radius: 6px;
+    margin-left: 24px;
 }
 
-.box2 {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+.yes {
+    background: #00623B;
     color: white;
-    width: 81px;
-    height: 35px;
+}
+
+.no {
     background: #E20000;
-    border-radius: 6px;
+    color: white;
 }
 
 @media (min-width: 576px) { 
