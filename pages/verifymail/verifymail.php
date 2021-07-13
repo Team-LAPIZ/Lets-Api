@@ -1,5 +1,5 @@
 <?php 
-    include 'index.php';
+    require_once '../../handler/php/loadenv.php';
 
     $emailToCheck = 'testmail@gmail.com';
 
@@ -25,6 +25,8 @@
     curl_close($ch);
 
     // Print the data out onto the page.
+    $email = $dataJson->email;
+
     echo ("Email\t\t: " . $dataJson->email . "\n");
     echo ("Deliverability\t: " . $dataJson->deliverability . "\n");
     echo ("Quality_score\t: " . $dataJson->quality_score . "\n");
