@@ -1,5 +1,5 @@
 <?php 
-    require_once '../../handler/php/loadenv.php';
+    require_once __DIR__ . '/../../handler/php/loadenv.php';
 
     $emailToCheck = 'testmail@gmail.com';
 

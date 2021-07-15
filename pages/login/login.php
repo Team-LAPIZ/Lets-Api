@@ -26,7 +26,7 @@
 
 <body class="background bulat1 bulat2 one-viewport-page">
 
-    <a class="back" href="../home/home.php"><img src="../../src/arrow.png" alt="back"></a>
+    <a class="back" href="../../index.php"><img src="../../src/arrow.png" alt="back"></a>
 
     <div class="login-container">
         <div class="login-box">

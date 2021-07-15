@@ -2,7 +2,7 @@
     <img class="logo" src="../../src/kite.png" alt="">
     <nav>
         <ul>
-            <a href="../home/home.php">
+            <a href="../../index.php">
                 <li>Home</li>
             </a>
             <a href="../info/news.php">
@@ -16,7 +16,6 @@
             </a>
         </ul>
     </nav>
-
     <div>
         <a href="../login/login.php"><button class="login">Login</button></a>
     </div>
