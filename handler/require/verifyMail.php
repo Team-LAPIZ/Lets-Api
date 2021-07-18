@@ -1,5 +1,5 @@
 <?php 
-    require_once __DIR__ . '/../../handler/php/loadenv.php';
+    require_once __DIR__ . '/./loadenv.php';
 
     function verify($emailToCheck){
         // Initialize cURL.

@@ -26,7 +26,7 @@
 
 <body class="background bulat1 bulat2">
 
-    <?php include_once "../header_footer/header.php" ?>
+    <?php include_once "../../handler/include/header.php" ?>
 
     <div class="search-container">
         <h1>Search Movie</h1>
@@ -102,7 +102,7 @@
         </div>
     </div>
 
-    <?php include_once "../header_footer/footer.php" ?>
+    <?php include_once "../../handler/include/footer.php" ?>
 
 </body>
 

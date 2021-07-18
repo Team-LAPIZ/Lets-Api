@@ -7,18 +7,16 @@
 
     <title>Let's API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home of Let's API. A website that utilize many
-    API(s) such as email verification, movies searching, anime, etc.">
+    <meta name="description" content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
     <meta name="keywords" content="API, Tools">
     <meta name="author" content="Team LAPIZ">
     <meta name="language" content="en">
 
     <meta property="og:title" content="Let's API">
-    <meta property="og:description" content="Home of Let's API. A website that utilize many
-    API(s) such as email verification, movies searching, anime, etc.">
+    <meta property="og:description" content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://github.com/Azzamubaidillah/API-Website/blob/main/src/kite.png">
-    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:image" content="https://letsapi.infinityfreeapp.com/src/kite.png">
+    <meta property="og:url" content="https://letsapi.infinityfreeapp.com/">
 
     <link rel="stylesheet" href="handler/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,26 +34,26 @@
                 <a href="./index.php">
                     <li>Home</li>
                 </a>
-                <a href="pages/info/news.php">
+                <a href="./news.php">
                     <li>News</li>
                 </a>
-                <a href="pages/info/about.php">
+                <a href="./about.php">
                     <li>About</li>
                 </a>
-                <a href="pages/info/team.php">
+                <a href="./team.php">
                     <li>Team</li>
                 </a>
             </ul>
         </nav>
         <div>
-            <a href="pages/login/login.php"><button class="login">Login</button></a>
+            <a href="pages/auth/login.php"><button class="login">Login</button></a>
         </div>
     </header>
 
     <h1 class="margin-top">Browse around the web</h1>
 
     <div class="container">
-        <a href="pages/movie/movie.php">
+        <a href="pages/movie/search.php">
             <div>
                 <div class="rectangle">
                     <img src="src/tmdb.png" alt="tmdb">
@@ -73,7 +71,7 @@
         </div>
         </a>
 
-        <a href="pages/verifymail/email.php">
+        <a href="pages/mail/verify.php">
             <div>
                 <div class="rectangle">
                     <img src="src/email.png" alt="email verification">

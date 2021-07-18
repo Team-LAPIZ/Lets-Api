@@ -48,7 +48,7 @@
             <a class="forgot-password" href="#">Forgot Password</a>
 
             <button>Signin</button>
-            <p>Dont have an account yet? <a href="#">Signup</a></p>
+            <p>Dont have an account yet? <a href="./register.php">Signup</a></p>
 
         </div>
 

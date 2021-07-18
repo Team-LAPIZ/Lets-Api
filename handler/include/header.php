@@ -2,16 +2,16 @@
     <img class="logo" src="../../src/kite.png" alt="">
     <nav>
         <ul>
-            <a href="../../index.php">
+            <a href="../../">
                 <li>Home</li>
             </a>
-            <a href="../info/news.php">
+            <a href="../../news.php">
                 <li>News</li>
             </a>
-            <a href="../info/about.php">
+            <a href="../../about.php">
                 <li>About</li>
             </a>
-            <a href="../info/team.php">
+            <a href="../../team.php">
                 <li>Team</li>
             </a>
         </ul>
