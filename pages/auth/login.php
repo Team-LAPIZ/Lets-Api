@@ -7,16 +7,16 @@
 
     <title>Login to Let's API</title
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Login Page of API-Website">
+    <meta name="description" content="Login Page of Let's API">
     <meta name="keywords" content="Login">
     <meta name="author" content="Team LAPIZ">
     <meta name="language" content="en">
 
     <meta property="og:title" content="Login to Let's API">
-    <meta property="og:description" content="Login Page of API-Website">
+    <meta property="og:description" content="Login Page of Let's API">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../../handler/css/style.css">
+    <link rel="stylesheet" href="../../handler/css/style.css?v=<? echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"

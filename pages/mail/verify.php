@@ -7,16 +7,16 @@
     
     <title>Verify Email</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Check an email address">
+    <meta name="description" content="Check an email address by Let's API, A website that utilize many API(s)">
     <meta name="keywords" content="Email, API">
     <meta name="author" content="Team LAPIZ">
     <meta name="language" content="en">
 
     <meta property="og:title" content="Verify Email">
-    <meta property="og:description" content="Check an email address">
+    <meta property="og:description" content="Check an email address by Let's API, A website that utilize many API(s)">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../../handler/css/style.css">
+    <link rel="stylesheet" href="../../handler/css/style.css?v=<? echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="../";>
@@ -30,7 +30,7 @@
 
     <div class="search-container">
         <h1>Verify email address</h1>
-        <form action="email.php" method="post">
+        <form method="post">
             <div class="wrapper">
                 <input class="search" placeholder="Enter email address here...." type="text" name="emailToCheck"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please enter a valid email address" minlength="3" required>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="validation-container">
-            <h4>Quality_score</h4>
+            <h4>Quality Score</h4>
             <div class="box">
                 <p id="quality">-</p>
             </div>

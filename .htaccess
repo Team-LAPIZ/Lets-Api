@@ -19,6 +19,11 @@ Order allow,deny
 Deny from all
 </FilesMatch>
 
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # Removing .php Extension from URL
 RewriteEngine on
 RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
@@ -34,10 +39,10 @@ RewriteRule .* - [L,R=404]
 
 # Error Handling
 # Forbidden
-ErrorDocument 403 https://infinityfree.net/errors/403/
+ErrorDocument 403 https://letsapi.infinityfreeapp.com/handler/errors/403
 
 # Page Not Found
-ErrorDocument 404 https://infinityfree.net/errors/404/
+ErrorDocument 404 https://letsapi.infinityfreeapp.com/handler/errors/404
 
 # Internal Server Error
 ErrorDocument 500 https://infinityfree.net/errors/500/

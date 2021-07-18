@@ -5,13 +5,13 @@
             <a href="../../">
                 <li>Home</li>
             </a>
-            <a href="../../news.php">
+            <a href="../../webinfo/news.php">
                 <li>News</li>
             </a>
-            <a href="../../about.php">
+            <a href="../../webinfo/about.php">
                 <li>About</li>
             </a>
-            <a href="../../team.php">
+            <a href="../../webinfo/team.php">
                 <li>Team</li>
             </a>
         </ul>

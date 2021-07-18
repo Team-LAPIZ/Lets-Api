@@ -7,16 +7,16 @@
     
     <title>Browse Movie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Movie Searching">
+    <meta name="description" content="Movie Searching by Let's API, A website that utilize many API(s)'">
     <meta name="keywords" content="Movie, API">
     <meta name="author" content="Team LAPIZ">
     <meta name="language" content="en">
 
     <meta property="og:title" content="Browse Movie">
-    <meta property="og:description" content="Movie Searching">
+    <meta property="og:description" content="Movie Searching by Let's API, A website that utilize many API(s)">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="../../handler/css/style.css">
+    <link rel="stylesheet" href="../../handler/css/style.css?v=<? echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
@@ -30,10 +30,12 @@
 
     <div class="search-container">
         <h1>Search Movie</h1>
-        <div class="wrapper">
-            <input class="search" placeholder="Search Movie Here..." type="text" required>
-            <button class="button">Search</button>
-        </div>
+        <form method="post">
+            <div class="wrapper">
+                <input class="search" placeholder="Search Movie Here..." type="text" required>
+                <button class="button">Search</button>
+            </div>
+        </form>
     </div>
 
     <div class="movie-section">
