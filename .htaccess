@@ -1,0 +1,37 @@
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# Removing .php Extension from URL
+RewriteEngine on
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect for complete URL
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+# Return 404 if original request is .php (which probably could not happen anyways)
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]
+
+# Error Handling
+# Forbidden
+ErrorDocument 403 https://infinityfree.net/errors/403/
+
+# Page Not Found
+ErrorDocument 404 https://infinityfree.net/errors/404/
+
+# Internal Server Error
+ErrorDocument 500 https://infinityfree.net/errors/500/
+
+# Service Unavailable
+ErrorDocument 503 https://infinityfree.net/errors/503/
