@@ -31,7 +31,8 @@
         <h1>Verify email address</h1>
         <form action="email.php" method="post">
             <div class="wrapper">
-                <input class="search" placeholder="Enter email address here...." type="text" name="emailToCheck" required>
+                <input class="search" placeholder="Enter email address here...." type="text" name="emailToCheck"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please enter a valid email address" minlength="3" required>
                 <button class="button" name="clickbuttonver">Verify</button>
             </div>
         </form>
@@ -84,7 +85,7 @@
         </div>
 
         <div class="validation-container">
-            <h4>Is this a role email??</h4>
+            <h4>Is this a role email?</h4>
             <div class="box">
                 <p class="box-default" id="yesRoleEmail">Yes</p>
                 <p class="box-default" id="noRoleEmail">No</p>
