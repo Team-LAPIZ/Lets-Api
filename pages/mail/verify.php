@@ -24,6 +24,8 @@
         rel="stylesheet">
 </head>
 
+<?php include "../../handler/include/forceDesktop.php"?>
+
 <body class="background bulat1 bulat2">
 
     <?php include_once "../../handler/include/header.php" ?>

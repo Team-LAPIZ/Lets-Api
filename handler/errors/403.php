@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
+<?php include "../include/forceDesktop.php"?>
+
 <body class="background bulat1 bulat2">
 
     <header>
@@ -59,10 +61,10 @@
     <div class="footer-basic">
         <footer>
             <div class="social">
-                <a href="https://github.com/Team-LAPIZ" target="_blank">
+                <a href="https://github.com/Team-LAPIZ" target="_blank" rel="noreferrer noopener">
                     <i class="icon ion-social-github"></i>
                 </a>
-                <a href="https://twitter.com/teamlapiz_" target="_blank">
+                <a href="https://twitter.com/teamlapiz_" target="_blank" rel="noreferrer noopener">
                     <i class="icon ion-social-twitter"></i>
                 </a>
             </div>
