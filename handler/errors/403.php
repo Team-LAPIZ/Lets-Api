@@ -36,10 +36,12 @@
         headerImport(2, "../../pages/auth/login.php");
     ?>
 
-    <h1 class="margin-top">403 - Forbidden</h1>
-    <p>You don't have permission to access this resource.</p>
-    <p><a class="link" href="../..">Go back to home</a></p>
-
+    <div class="content">
+        <h1 class="margin-top">403 - Forbidden</h1>
+        <p>You don't have permission to access this resource.</p>
+        <p><a class="link" href="../..">Go back to home</a></p>
+    </div>
+    
     <?php 
         include_once "../include/footer.php";
         footerImport(1);

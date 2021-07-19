@@ -36,9 +36,11 @@
         headerImport(2, "../../pages/auth/login.php");
     ?>
 
-    <h1 class="margin-top">404 - Page Not Found</h1>
-    <p>The page you were looking for could not be found! If you entered the URL manually, please double check what you’ve entered.</p>
-    <p><a class="link" href="../..">Go back to home</a></p>
+    <div class="content">
+        <h1 class="margin-top">404 - Page Not Found</h1>
+        <p>The page you were looking for could not be found! If you entered the URL manually, please double check what you’ve entered.</p>
+        <p><a class="link" href="../..">Go back to home</a></p>
+    </div>
 
     <?php 
         include_once "../include/footer.php";

@@ -7,13 +7,15 @@
 
     <title>Let's API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
+    <meta name="description"
+        content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
     <meta name="keywords" content="API, Tools">
     <meta name="author" content="Team LAPIZ">
     <meta name="language" content="en">
 
     <meta property="og:title" content="Let's API">
-    <meta property="og:description" content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
+    <meta property="og:description"
+        content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="letsapi.infinityfreeapp.com">
     <meta property="og:image" content="https://letsapi.infinityfreeapp.com/src/kite.png">
@@ -37,34 +39,35 @@
     ?>
 
     <h1 class="margin-top">Browse around the web</h1>
-
-    <div class="container">
-        <a href="pages/movie/search.php">
-            <div>
-                <div class="rectangle">
-                    <img src="src/tmdb.png" alt="tmdb">
+    <div class="content">
+        <div class="container">
+            <a href="pages/movie/search.php">
+                <div>
+                    <div class="rectangle">
+                        <img src="src/tmdb.png" alt="tmdb">
+                    </div>
+                    <p>Browse Movie</p>
                 </div>
-                <p>Browse Movie</p>
-            </div>
-        </a>
+            </a>
 
-        <!-- <a href="../"> -->
-            <div>
-                <div class="rectangle">
-                    <img src="src/mal.png" alt="tmdb">
+            <a href="#">
+                <div>
+                    <div class="rectangle">
+                        <img src="src/mal.png" alt="tmdb">
+                    </div>
+                    <p>Browse Anime</p>
                 </div>
-                <p>Browse Anime</p>
-            </div>
-        </a>
+            </a>
 
-        <a href="pages/mail/verify.php">
-            <div>
-                <div class="rectangle">
-                    <img src="src/email.png" alt="email verification">
+            <a href="pages/mail/verify.php">
+                <div>
+                    <div class="rectangle">
+                        <img src="src/email.png" alt="email verification">
+                    </div>
+                    <p>Email verification</p>
                 </div>
-                <p>Email verification</p>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
 
     <?php 

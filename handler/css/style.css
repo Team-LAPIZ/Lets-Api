@@ -1,3 +1,4 @@
+html,
 body {
     font-family: 'Manrope', sans-serif;
     background-image: url('../../src/bg.jpg');
@@ -7,6 +8,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -21,8 +24,8 @@ a {
 
 .footer-basic {
     padding: 40px 0;
-    /* background-color: #ffffff; */
     color: #4b4c4d;
+    flex-shrink: 0;
 }
 
 .footer-basic ul {
@@ -35,7 +38,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .footer-basic li {
@@ -110,7 +112,6 @@ header {
 }
 
 li {
-
     margin: 0 24px;
     cursor: pointer;
 }
@@ -118,7 +119,6 @@ li {
 ul {
     display: flex;
     list-style-type: none;
-
 }
 
 .login {
@@ -140,11 +140,15 @@ h1 {
     margin-top: 120px;
 }
 
+.content {
+    flex: 1 0 auto;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 128px;
+    margin-top: 70px;
     flex-wrap: wrap;
 }
 
