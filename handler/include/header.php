@@ -20,24 +20,25 @@
         $dirLogo .= "src/kite.png";
 
         echo "
-        <header>
-            <img class=\"logo\" src=\"{$dirLogo}\" alt=\"\">
-            <nav>
-                <ul>
-                    <a href=\"{$dirHome}\">
-                        <li>Home</li>
-                    </a>
-                    <a href=\"{$dirNews}\">
-                        <li>News</li>
-                    </a>
-                    <a href=\"{$dirAbout}\">
-                        <li>About</li>
-                    </a>
-                    <a href=\"{$dirTeam}\">
-                        <li>Team</li>
-                    </a>
-                </ul>
-            </nav>
+        <header class =\"header\">
+            
+            <img class=\"logo-header\" src=\"{$dirLogo}\" alt=\"Let's API Logo\">
+
+            <ul class =\"list-inline\">
+                <li class=\"list-inline-item\">
+                    <a href=\"{$dirHome}\">Home</a>
+                </li>
+                <li class=\"list-inline-item\">
+                    <a href=\"{$dirNews}\">News</a>
+                </li>
+                <li class=\"list-inline-item\">
+                    <a href=\"{$dirAbout}\">About</a>
+                </li>
+                <li class=\"list-inline-item\">
+                    <a href=\"{$dirTeam}\">Team</a>
+                </li>
+            </ul>
+          
             <div>
                 <a href=\"{$pathLogin}\"><button class=\"login\">Login</button></a>
             </div>
