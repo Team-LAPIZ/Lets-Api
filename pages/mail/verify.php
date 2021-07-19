@@ -28,7 +28,10 @@
 
 <body class="background bulat1 bulat2">
 
-    <?php include_once "../../handler/include/header.php" ?>
+    <?php 
+        include_once "../../handler/include/header.php";
+        headerImport(2, "../auth/login.php");
+    ?>
 
     <div class="search-container">
         <h1>Verify email address</h1>
@@ -155,7 +158,10 @@
     }
     ?>
 
-    <?php include_once "../../handler/include/footer.php" ?>
+    <?php 
+        include_once "../../handler/include/footer.php";
+        footerImport(2);
+    ?>
 
 </body>
 
