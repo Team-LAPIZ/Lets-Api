@@ -7,13 +7,15 @@
 
     <title>Let's API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
+    <meta name="description"
+        content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
     <meta name="keywords" content="API, Tools">
     <meta name="author" content="Team LAPIZ">
     <meta name="language" content="en">
 
     <meta property="og:title" content="Let's API">
-    <meta property="og:description" content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
+    <meta property="og:description"
+        content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="letsapi.infinityfreeapp.com">
     <meta property="og:image" content="https://letsapi.infinityfreeapp.com/src/kite.png">
@@ -31,79 +33,47 @@
 
 <body class="background bulat1 bulat2">
 
-    <header>
-        <img class="logo" src="src/kite.png" alt="">
-        <nav>
-            <ul>
-                <a href="./">
-                    <li>Home</li>
-                </a>
-                <a href="webinfo/news.php">
-                    <li>News</li>
-                </a>
-                <a href="webinfo/about.php">
-                    <li>About</li>
-                </a>
-                <a href="webinfo/team.php">
-                    <li>Team</li>
-                </a>
-            </ul>
-        </nav>
-        <div>
-            <a href="pages/auth/login.php"><button class="login">Login</button></a>
-        </div>
-    </header>
+    <?php 
+        include_once "handler/include/header.php";
+        headerImport(0, "pages/auth/login.php");
+    ?>
 
     <h1 class="margin-top">Browse around the web</h1>
-
-    <div class="container">
-        <a href="pages/movie/search.php">
-            <div>
-                <div class="rectangle">
-                    <img src="src/tmdb.png" alt="tmdb">
+    <div class="content">
+        <div class="container">
+            <a href="pages/movie/search.php">
+                <div>
+                    <div class="rectangle">
+                        <img src="src/tmdb.png" alt="tmdb">
+                    </div>
+                    <p>Browse Movie</p>
                 </div>
-                <p>Browse Movie</p>
-            </div>
-        </a>
+            </a>
 
-        <!-- <a href="../"> -->
-            <div>
-                <div class="rectangle">
-                    <img src="src/mal.png" alt="tmdb">
+            <a href="#">
+                <div>
+                    <div class="rectangle">
+                        <img src="src/mal.png" alt="tmdb">
+                    </div>
+                    <p>Browse Anime</p>
                 </div>
-                <p>Browse Anime</p>
-            </div>
-        </a>
+            </a>
 
-        <a href="pages/mail/verify.php">
-            <div>
-                <div class="rectangle">
-                    <img src="src/email.png" alt="email verification">
+            <a href="pages/mail/verify.php">
+                <div>
+                    <div class="rectangle">
+                        <img src="src/email.png" alt="email verification">
+                    </div>
+                    <p>Email verification</p>
                 </div>
-                <p>Email verification</p>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
 
-    <div class="footer-basic">
-        <footer>
-            <div class="social">
-                <a href="https://github.com/Team-LAPIZ" target="_blank" rel="noreferrer noopener">
-                    <i class="icon ion-social-github"></i>
-                </a>
-                <a href="https://twitter.com/teamlapiz_" target="_blank" rel="noreferrer noopener">
-                    <i class="icon ion-social-twitter"></i>
-                </a>
-            </div>
-
-            <div class="list-inline">
-                <li class="list-inline-item"><a href="https://github.com/Team-LAPIZ/Lets-Api" target="_blank" rel="noreferrer noopener">Source Code</a></li>
-                <li class="list-inline-item"><a href="webinfo/about.php">Services</a></li>
-                <li class="list-inline-item"><a href="webinfo/privacypolicy.php">Privacy Policy</a></li>
-            </div>
-            <p class="copyright">Team LAPIZ © 2021 - Hosted on <a class="footerlink" href="http://infinityfree.net" target="_blank" rel="noreferrer noopener">InfinityFree.net</a>.</p>
-        </footer>
-    </div>
+    <?php 
+        include_once "handler/include/footer.php";
+        footerImport(0);
+    ?>
 
 </body>
 

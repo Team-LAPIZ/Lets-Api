@@ -31,52 +31,21 @@
 
 <body class="background bulat1 bulat2">
 
-    <header>
-        <img class="logo" src="../../src/kite.png" alt="">
-        <nav>
-            <ul>
-                <a href="../../">
-                    <li>Home</li>
-                </a>
-                <a href="../../webinfo/news.php">
-                    <li>News</li>
-                </a>
-                <a href="../../webinfo/about.php">
-                    <li>About</li>
-                </a>
-                <a href="../../webinfo/team.php">
-                    <li>Team</li>
-                </a>
-            </ul>
-        </nav>
-        <div>
-            <a href="../../pages/auth/login.php"><button class="login">Login</button></a>
-        </div>
-    </header>
+    <?php
+        include_once "../include/header.php";
+        headerImport(2, "../../pages/auth/login.php");
+    ?>
 
-    <h1 class="margin-top">404 - Page Not Found</h1>
-    <p>The page you were looking for could not be found! If you entered the URL manually, please double check what you’ve entered.</p>
-    <p><a class="link" href="../..">Go back to home</a></p>
-
-    <div class="footer-basic">
-        <footer>
-            <div class="social">
-                <a href="https://github.com/Team-LAPIZ" target="_blank" rel="noreferrer noopener">
-                    <i class="icon ion-social-github"></i>
-                </a>
-                <a href="https://twitter.com/teamlapiz_" target="_blank" rel="noreferrer noopener">
-                    <i class="icon ion-social-twitter"></i>
-                </a>
-            </div>
-
-            <div class="list-inline">
-                <li class="list-inline-item"><a href="https://github.com/Team-LAPIZ/Lets-Api" target="_blank">Source Code</a></li>
-                <li class="list-inline-item"><a href="../../webinfo/about.php">Services</a></li>
-                <li class="list-inline-item"><a href="../../webinfo/privacypolicy.php">Privacy Policy</a></li>
-            </div>
-            <p class="copyright">Team LAPIZ © 2021 - Hosted on <a class="footerlink" href="http://infinityfree.net" target="_blank">InfinityFree.net</a>.</p>
-        </footer>
+    <div class="content">
+        <h1 class="margin-top">404 - Page Not Found</h1>
+        <p>The page you were looking for could not be found! If you entered the URL manually, please double check what you’ve entered.</p>
+        <p><a class="link" href="../..">Go back to home</a></p>
     </div>
+
+    <?php 
+        include_once "../include/footer.php";
+        footerImport(1);
+    ?>
 
 </body>
 
