@@ -38,7 +38,6 @@
                     <a href=\"{$dirTeam}\">Team</a>
                 </li>
             </ul>
-          
             <div>
                 <a href=\"{$pathLogin}\"><button class=\"login\">Login</button></a>
             </div>

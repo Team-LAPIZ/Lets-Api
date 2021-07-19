@@ -27,16 +27,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
 </head>
 
 <?php include "handler/include/forceDesktop.php"?>
 
 <body class="background bulat1 bulat2">
 
-    <?php 
-        include_once "handler/include/header.php";
-        headerImport(0, "pages/auth/login.php");
-    ?>
+
+    <header class="header">
+        <img class="logo-header" src="src/kite.png" alt="Let's API Logo">
+            <ul class="list-inline">
+                <li class="list-inline-item">Home</li>
+                <li class="list-inline-item">About</li>
+                <li class="list-inline-item">Team</li>
+            </ul>
+  
+
+        <div>
+            <a href="login.html"><button class="login">Login</button></a>
+        </div>
+    </header>
+
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
 
     <h1 class="margin-top">Browse around the web</h1>
     <div class="content">
@@ -75,6 +92,7 @@
         footerImport(0);
     ?>
 
+<script src="script.js"></script>
 </body>
 
 </html>
