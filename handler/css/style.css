@@ -372,7 +372,7 @@ p {
 
 .movie-wrapper {
     display: flex;
-    max-width: 600px;
+    max-width: 560px;
     margin-top: 80px;
 }
 
@@ -439,6 +439,14 @@ p {
  
         max-width: 400px;
         margin: auto;
+    }
+
+    .movie-text-wrapper {
+        font-size: 8pt;
+    }
+
+    .judul {
+        font-size: 10pt;
     }
  }
 
