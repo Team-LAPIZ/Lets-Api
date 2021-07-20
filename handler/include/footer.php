@@ -4,12 +4,15 @@
     function footerImport($dirJump){
         $dirService = "";
         $dirPrivacyPolicy = "";
+        $dirFaq = "";
         for ($i=0; $i < $dirJump; $i++) { 
             $dirService .= "../";
             $dirPrivacyPolicy .= "../";
+            $dirFaq .= "../";
         }
 
         $dirService .= "webinfo/about.php";
+        $dirFaq .= "webinfo/faq.php";
         $dirPrivacyPolicy .= "webinfo/privacypolicy.php";
 
         echo "
@@ -29,6 +32,7 @@
             <div class=\"list-inline\">
                 <li class=\"list-inline-item\"><a href=\"https://github.com/Team-LAPIZ/Lets-Api\" target=\"_blank\" rel=\"noreferrer noopener\">Source Code</a></li>
                 <li class=\"list-inline-item\"><a href=\"{$dirService}\">Services</a></li>
+                <li class=\"list-inline-item\"><a href=\"{$dirFaq}\">FAQ</a></li>
                 <li class=\"list-inline-item\"><a href=\"{$dirPrivacyPolicy}\">Privacy Policy</a></li>
             </div>
             <p class=\"copyright\">Team LAPIZ © 2021 - Hosted on <a class=\"footerlink\" href=\"http://infinityfree.net\" target=\"_blank\" rel=\"noreferrer noopener\">InfinityFree.net</a>.</p>
