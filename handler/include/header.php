@@ -5,12 +5,15 @@
         $dirAbout = "";
         $dirTeam = "";
         $dirLogo = "";
+        $loadScript = "";
+
         for ($i=0; $i < $dirJump; $i++) { 
             $dirHome .= "../";
             $dirNews .= "../";
             $dirAbout .= "../";
             $dirTeam .= "../";
             $dirLogo .= "../";
+            $loadScript .= "../";
         }
 
         $dirHome .= "./";
@@ -18,6 +21,7 @@
         $dirAbout .= "webinfo/about.php";
         $dirTeam .= "webinfo/team.php";
         $dirLogo .= "src/kite.png";
+        $loadScript .= "handler/script/headerButton.js";
 
         echo "
         <header class =\"header\">
@@ -38,11 +42,20 @@
                     <a href=\"{$dirTeam}\">Team</a>
                 </li>
             </ul>
+
             <div>
                 <a href=\"{$pathLogin}\"><button class=\"login\">Login</button></a>
             </div>
         </header>
+
+        <a class=\"toggle-button\" id=\"togglebtn\">
+            <span class=\"bar\"></span>
+            <span class=\"bar\"></span>
+            <span class=\"bar\"></span>
+            <span class=\"barText\">Menu</span>
+        </a>
+
+        <script src=\"{$loadScript}\"></script>
         ";
     }
-
 ?>

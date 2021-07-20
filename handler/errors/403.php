@@ -27,8 +27,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
-<?php include "../include/forceDesktop.php"?>
-
 <body class="background bulat1 bulat2">
 
     <?php 

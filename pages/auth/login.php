@@ -24,8 +24,6 @@
     
 </head>
 
-<?php include "../../handler/include/forceDesktop.php"?>
-
 <body class="background bulat1 bulat2 one-viewport-page">
 
     <a class="back" href="../../"><img src="../../src/arrow.png" alt="back"></a>
