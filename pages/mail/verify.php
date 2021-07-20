@@ -47,21 +47,21 @@
             <div class="validation-container">
                 <h4>Email to check</h4>
                 <div class="box">
-                    <p id="emailToCheck">-</p>
+                    <p class="box-text" id="emailToCheck">-</p>
                 </div>
             </div>
 
             <div class="validation-container">
                 <h4>Deliverability</h4>
                 <div class="box">
-                    <p id="deliverability">-</p>
+                    <p class="box-text" id="deliverability">-</p>
                 </div>
             </div>
 
             <div class="validation-container">
                 <h4>Quality Score</h4>
                 <div class="box">
-                    <p id="quality">-</p>
+                    <p class="box-text" id="quality">-</p>
                 </div>
             </div>
 

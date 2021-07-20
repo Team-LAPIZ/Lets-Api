@@ -550,6 +550,11 @@ p {
     .validation-container {
         max-width: 400px;
         margin: auto;
+        text-align: left;
+    }
+
+    .box-text {
+        margin-right: 10px;
     }
 
     .movie-text-wrapper {
