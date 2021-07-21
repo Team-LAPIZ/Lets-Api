@@ -118,7 +118,9 @@
     <?php 
     require_once "../../handler/require/verifyMail.php";
     // button pressed
-    if (isset($_POST['clickbuttonver'])) {
+    if (isset($_POST['clickbuttonver']) && !empty($_POST['emailToCheck']) &&
+    preg_match('/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i', $_POST['emailToCheck'])) {
+        // get email address
         $emailToCheck = $_POST['emailToCheck'];
 
         list($email, $deliverability, $quality_score, $valid, $free, 
