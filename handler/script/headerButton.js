@@ -25,8 +25,10 @@ function getScreenWidth() {
 window.onresize = function() {
     if (getScreenWidth() > 700) {
         iniHeaderMobile.style.display = 'none';
-        visibleState = true;
-    } else { 
+    } else 
+    if (getScreenWidth() < 700 && visibleState == true) { 
+        iniHeaderMobile.style.display = 'flex';
+    } else {
         visibleState = false;
     }
 }
