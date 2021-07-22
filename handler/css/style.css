@@ -331,6 +331,15 @@ p {
     cursor: pointer;
 }
 
+.center-recaptcha {
+    text-align: center;
+}
+
+.g-recaptcha {
+    padding-top: 10px;
+    display: inline-block;
+}
+
 .search:hover,
 .search:focus {
     border: 1.5px solid #009688;
@@ -343,7 +352,7 @@ p {
 }
 
 .validation-group {
-    margin-top: 36px;
+    margin-top: 15px;
 }
 
 .validation-container {
