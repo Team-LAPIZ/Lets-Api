@@ -86,16 +86,29 @@
         <header class = \"mobile-menu\" id=\"mobile-dropdown\">
             <ul class =\"list-inline-mobile\" id=\"dropdown-list\">
                 <li class=\"list-inline-item-mobile\">
-                    <a href=\"{$dirHome}\">Home</a>
+                    <div class=\"icon-with-text\">
+                        <img src=\"https://img.icons8.com/material-outlined/20/000000/home--v2.png\"/>
+                        <a href=\"{$dirHome}\">Home</a>
+                    </div>
                 </li>
                 <li class=\"list-inline-item-mobile push-Mleft-little\">
-                    <a href=\"{$dirPost}\">Posts</a>
+                    <div class=\"icon-with-text\">
+                        <img src=\"https://img.icons8.com/material-outlined/20/000000/news.png\"/>
+                        <a href=\"{$dirPost}\">Posts</a>
+                    </div>
                 </li>
                 <li class=\"list-inline-item-mobile push-Mleft-little\">
-                    <a href=\"{$dirAbout}\">About</a>
+                    <div class=\"icon-with-text\">
+                        <img src=\"https://img.icons8.com/material-outlined/20/000000/about.png\"/>
+                        <a href=\"{$dirAbout}\">About</a>
+                    </div>    
+                
                 </li>
                 <li class=\"list-inline-item-mobile push-Mleft-little\">
-                    <a href=\"{$dirTeam}\">Team</a>
+                    <div class=\"icon-with-text\">
+                        <img src=\"https://img.icons8.com/material-outlined/15/000000/user-group-man-woman.png\"/>
+                        <a href=\"{$dirTeam}\">Team</a>
+                    </div>
                 </li>
             </ul>
         </header>
