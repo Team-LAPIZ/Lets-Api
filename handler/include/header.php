@@ -64,7 +64,7 @@
         </header>
 
         <header class = \"mobile-menu\" id=\"mobile-dropdown\">
-            <ul class =\"list-inline-mobile\">
+            <ul class =\"list-inline-mobile\" id=\"dropdown-list\">
                 <li class=\"list-inline-item-mobile\">
                     <a href=\"{$dirHome}\">Home</a>
                 </li>

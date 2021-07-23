@@ -1,18 +1,19 @@
 const toggleButton = document.getElementById("togglebtn");
 const headerMobile = document.getElementById("header-mobile");
 const dropdownMobile = document.getElementById("mobile-dropdown");
+const dropdownItem = document.getElementById("dropdown-list");
 
 var visibleState = false;
 
 // Dropdown menu
 toggleButton.addEventListener('click', () => {
     if(visibleState == false){
-        fadeInDropdown(dropdownMobile);
+        fadeInDropdown(dropdownMobile, dropdownItem);
         
         headerMobile.style.borderBottom = 'none';
         visibleState = true;
     } else {
-        fadeOutDropdown(dropdownMobile);
+        fadeOutDropdown(dropdownMobile, dropdownItem);
         
         headerMobile.style.borderBottom = '1px solid white';
         visibleState = false;
@@ -20,21 +21,23 @@ toggleButton.addEventListener('click', () => {
 });
 
 // Dropdown animation
-function fadeOutDropdown(element) {
+function fadeOutDropdown(element, elementlist) {
     var op = 1;  // initial opacity
     var timer = setInterval(function () {
         if (op <= 0.1){
             clearInterval(timer);
+            elementlist.style.opacity = 0;
             element.style.display = 'none';
         }
         element.style.opacity = op;
+        elementlist.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
-    }, 50);
+    }, 30);
 }
 
 // Dropdown animation
-function fadeInDropdown(element) {
+function fadeInDropdown(element, elementlist) {
     var op = 0.1;  // initial opacity
     element.style.display = 'flex';
     var timer = setInterval(function () {
@@ -42,6 +45,7 @@ function fadeInDropdown(element) {
             clearInterval(timer);
         }
         element.style.opacity = op;
+        elementlist.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op += op * 0.1;
     }, 10);
@@ -93,7 +97,7 @@ window.onresize = function() {
         headerMobile.style.borderBottom = '1px solid white';
     } else 
     if (getScreenWidth() < 700 && visibleState == true) { 
-        fadeInDropdown(dropdownMobile);
+        fadeInDropdown(dropdownMobile, dropdownItem);
 
         headerMobile.style.borderBottom = 'none';
     } else {
