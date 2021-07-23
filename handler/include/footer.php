@@ -11,7 +11,7 @@
             $dirFaq .= "../";
         }
 
-        $dirService .= "webinfo/about.php";
+        $dirService .= "webinfo/service.php";
         $dirFaq .= "webinfo/faq.php";
         $dirPrivacyPolicy .= "webinfo/privacypolicy.php";
 
@@ -45,7 +45,8 @@
                 <li class=\"list-inline-item\"><a href=\"{$dirFaq}\">FAQ</a></li>
                 <li class=\"list-inline-item\"><a href=\"{$dirPrivacyPolicy}\">Privacy Policy</a></li>
             </div>
-            <p class=\"copyright\">Team LAPIZ © 2021 - Hosted on <a class=\"footerlink\" href=\"http://infinityfree.net\" target=\"_blank\" rel=\"noreferrer noopener\">InfinityFree.net</a></p>
+            <p class=\"copyright\">Team LAPIZ © 2021 - Hosted on <a class=\"footerlink\" href=\"http://infinityfree.net\" target=\"_blank\" rel=\"noreferrer noopener\">InfinityFree.net</a> -
+            <a class=\"footerlink\" href=\"https://icons8.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Icons</p>
         </footer>
         ";
     }

@@ -2,28 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login to Let's API</title>
+    <?php 
+        include_once "../../handler/include/meta.php";
+        importMeta("pages/movie/search.php", "../../handler/css/style.css", "Login", "Login Page of Let's API");
+    ?>
 
-    <title>Login to Let's API</title
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Login Page of Let's API">
-    <meta name="keywords" content="Login">
-    <meta name="author" content="Team LAPIZ">
-    <meta name="language" content="en">
-
-    <meta property="og:title" content="Login to Let's API">
-    <meta property="og:description" content="Login Page of Let's API">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://letsapi.infinityfreeapp.com/src/kite.png">
-    <meta property="og:url" content="https://letsapi.infinityfreeapp.com/pages/auth/login">
-
-    <link rel="stylesheet" href="../../handler/css/style.css?v=<? echo time(); ?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    
 </head>
 
 <body class="background bulat1 bulat2 one-viewport-page">
@@ -31,7 +15,7 @@
     <a class="back" href="../../"><img src="../../src/arrow.png" alt="back"></a>
 
     <div class="login-container">
-        <div class="login-box">
+        <div class="login-box fadeIn">
 
             <h2>Login</h2>
             <div class="img-input">
@@ -53,9 +37,7 @@
             <p>Dont have an account yet? <a href="./register.php">Signup</a></p>
 
         </div>
-
     </div>
-
 </body>
 
 </html>

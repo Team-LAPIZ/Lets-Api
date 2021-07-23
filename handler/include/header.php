@@ -1,7 +1,7 @@
 <?php 
-    function headerImport($dirJump, $pathLogin){ 
+    function headerImport($dirJump, $pathLogin, $mode = 0){ 
         $dirHome = "";
-        $dirNews = "";
+        $dirPost = "";
         $dirAbout = "";
         $dirTeam = "";
         $dirLogo = "";
@@ -9,7 +9,7 @@
 
         for ($i=0; $i < $dirJump; $i++) { 
             $dirHome .= "../";
-            $dirNews .= "../";
+            $dirPost .= "../";
             $dirAbout .= "../";
             $dirTeam .= "../";
             $dirLogo .= "../";
@@ -18,12 +18,16 @@
 
         $time = time();
         $dirHome .= "./";
-        $dirNews .= "webinfo/news.php";
+        $dirPost .= "post.php";
         $dirAbout .= "webinfo/about.php";
         $dirTeam .= "webinfo/team.php";
         $dirLogo .= "src/kite.png";
         $loadScript .= "handler/script/headerButton.js";
         $loadScript .= "?v={$time}";
+
+        if($dirJump == 0) { 
+            $dirPost = "./post.php";
+        }
 
         echo "
         <header class =\"header\">
@@ -32,16 +36,32 @@
 
             <ul class =\"list-inline\">
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirHome}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">Home</a>
+                    <div class=\"icon-with-text\">
+                        <a href=\"{$dirHome}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">
+                            <img src=\"https://img.icons8.com/material-outlined/20/000000/home--v2.png\"/>Home
+                        </a>
+                    </div>
                 </li>
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirNews}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">News</a>
+                    <div class=\"icon-with-text\">
+                        <a href=\"{$dirPost}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">
+                            <img src=\"https://img.icons8.com/material-outlined/20/000000/news.png\"/>Posts
+                        </a>
+                    </div>
                 </li>
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirAbout}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">About</a>
+                    <div class=\"icon-with-text\">    
+                        <a href=\"{$dirAbout}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">
+                            <img src=\"https://img.icons8.com/material-outlined/20/000000/about.png\"/>About
+                        </a>
+                    </div>
                 </li>
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirTeam}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">Team</a>
+                    <div class=\"icon-with-text\">
+                        <a href=\"{$dirTeam}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">
+                            <img src=\"https://img.icons8.com/material-outlined/20/000000/user-group-man-woman.png\"/>Team
+                        </a>
+                    </div>
                 </li>
             </ul>
 
@@ -69,7 +89,7 @@
                     <a href=\"{$dirHome}\">Home</a>
                 </li>
                 <li class=\"list-inline-item-mobile push-Mleft-little\">
-                    <a href=\"{$dirNews}\">News</a>
+                    <a href=\"{$dirPost}\">Posts</a>
                 </li>
                 <li class=\"list-inline-item-mobile push-Mleft-little\">
                     <a href=\"{$dirAbout}\">About</a>

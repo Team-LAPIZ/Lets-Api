@@ -123,12 +123,19 @@ a {
 
 .mobile-menu .list-inline-item-mobile { /* li */
     cursor: pointer;
-    padding: 0px;
     font-weight: bolder;
+    padding-bottom: 10px;
 }
 
 .mobile-menu .list-inline-item-mobile>a:hover {
     opacity: 0.8;
+}
+
+.icon-with-text {
+    display: flex;
+    align-items: center;
+    max-width: 15px;
+    max-height: 15px;
 }
 
 .header {
@@ -149,16 +156,8 @@ a {
     margin-left: auto;
 }
 
-.header .list-inline-item { /* li */
-    margin: 0px 24px;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-}
-
-.header .list-inline-item-push { /* li */
-    margin: 0px 24px;
+.header .list-inline .list-inline-item {
+    padding: 0px 34px;
     display: inline-block;
     align-items: center;
     text-align: center;
