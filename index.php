@@ -14,8 +14,7 @@
     <meta name="language" content="en">
 
     <meta property="og:title" content="Let's API">
-    <meta property="og:description"
-        content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
+    <meta property="og:description" content="Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="letsapi.infinityfreeapp.com">
     <meta property="og:image" content="https://letsapi.infinityfreeapp.com/src/kite.png">

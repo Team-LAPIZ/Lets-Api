@@ -4,21 +4,23 @@ const dropdownMobile = document.getElementById("mobile-dropdown");
 
 var visibleState = false;
 
+// Dropdown menu
 toggleButton.addEventListener('click', () => {
     if(visibleState == false){
-        fadeIn(dropdownMobile);
+        fadeInDropdown(dropdownMobile);
         
         headerMobile.style.borderBottom = 'none';
         visibleState = true;
     } else {
-        fadeOut(dropdownMobile);
+        fadeOutDropdown(dropdownMobile);
         
         headerMobile.style.borderBottom = '1px solid white';
         visibleState = false;
     }
 });
 
-function fadeOut(element) {
+// Dropdown animation
+function fadeOutDropdown(element) {
     var op = 1;  // initial opacity
     var timer = setInterval(function () {
         if (op <= 0.1){
@@ -31,7 +33,8 @@ function fadeOut(element) {
     }, 50);
 }
 
-function fadeIn(element) {
+// Dropdown animation
+function fadeInDropdown(element) {
     var op = 0.1;  // initial opacity
     element.style.display = 'flex';
     var timer = setInterval(function () {
@@ -42,6 +45,36 @@ function fadeIn(element) {
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op += op * 0.1;
     }, 10);
+}
+
+// Border animation
+function fadeOutBorder(element) {
+    var op = 2.5;  // initial opacity
+    var args = 'px solid #189AB4';
+    // element.style.borderBottom = 'none';
+
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.borderBottom = 'none';
+        } else {
+            element.style.borderBottom = op + '' + args;
+            op -= op * 0.1;
+        }
+    }, 0.1);
+}
+
+// Border animation
+function fadeInBorder(element) {
+    var op = 0.1;  // initial opacity
+    var args = 'px solid #189AB4';
+    var timer = setInterval(function () {
+        if (op >= 2.5){
+            clearInterval(timer);
+        }
+        element.style.borderBottom = op + '' + args;
+        op += op * 0.1;
+    }, 0.1);
 }
 
 function getScreenWidth() {
@@ -60,7 +93,7 @@ window.onresize = function() {
         headerMobile.style.borderBottom = '1px solid white';
     } else 
     if (getScreenWidth() < 700 && visibleState == true) { 
-        fadeIn(dropdownMobile);
+        fadeInDropdown(dropdownMobile);
 
         headerMobile.style.borderBottom = 'none';
     } else {

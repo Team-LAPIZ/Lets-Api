@@ -32,16 +32,16 @@
 
             <ul class =\"list-inline\">
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirHome}\">Home</a>
+                    <a href=\"{$dirHome}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">Home</a>
                 </li>
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirNews}\">News</a>
+                    <a href=\"{$dirNews}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">News</a>
                 </li>
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirAbout}\">About</a>
+                    <a href=\"{$dirAbout}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">About</a>
                 </li>
                 <li class=\"list-inline-item\">
-                    <a href=\"{$dirTeam}\">Team</a>
+                    <a href=\"{$dirTeam}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">Team</a>
                 </li>
             </ul>
 

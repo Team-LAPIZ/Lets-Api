@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
 <?php 
-    function footerImport($dirJump){
+    function footerImport($dirJump, $apiFrom = ""){
         $dirService = "";
         $dirPrivacyPolicy = "";
         $dirFaq = "";
@@ -17,6 +17,15 @@
 
         echo "
         <div class = \"gap\"></div>
+        ";
+
+        if($apiFrom !== ""){
+            echo "
+        <p class =\"api-call\">{$apiFrom}</p>
+            ";
+        }
+
+        echo "
         <footer class=\"footer-basic\">
             <div class=\"social\">
                 <a href=\"https://github.com/Team-LAPIZ\" target=\"_blank\" rel=\"noreferrer noopener\">
@@ -36,7 +45,7 @@
                 <li class=\"list-inline-item\"><a href=\"{$dirFaq}\">FAQ</a></li>
                 <li class=\"list-inline-item\"><a href=\"{$dirPrivacyPolicy}\">Privacy Policy</a></li>
             </div>
-            <p class=\"copyright\">Team LAPIZ © 2021 - Hosted on <a class=\"footerlink\" href=\"http://infinityfree.net\" target=\"_blank\" rel=\"noreferrer noopener\">InfinityFree.net</a>.</p>
+            <p class=\"copyright\">Team LAPIZ © 2021 - Hosted on <a class=\"footerlink\" href=\"http://infinityfree.net\" target=\"_blank\" rel=\"noreferrer noopener\">InfinityFree.net</a></p>
         </footer>
         ";
     }

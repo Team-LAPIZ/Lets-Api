@@ -15,6 +15,8 @@
     <meta property="og:title" content="Verify Email">
     <meta property="og:description" content="Check an email address by Let's API, A website that utilize many API(s)">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://letsapi.infinityfreeapp.com/src/kite.png">
+    <meta property="og:url" content="https://letsapi.infinityfreeapp.com/pages/mail/verify">
 
     <link rel="stylesheet" href="../../handler/css/style.css?v=<? echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -210,7 +212,7 @@
 
     <?php 
         include_once "../../handler/include/footer.php";
-        footerImport(2);
+        footerImport(2, "Verify Email from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
     ?>
 
 </body>

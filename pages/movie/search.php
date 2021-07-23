@@ -15,6 +15,8 @@
     <meta property="og:title" content="Browse Movie">
     <meta property="og:description" content="Movie Searching by Let's API, A website that utilize many API(s)">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://letsapi.infinityfreeapp.com/src/kite.png">
+    <meta property="og:url" content="https://letsapi.infinityfreeapp.com/pages/movie/search">
 
     <link rel="stylesheet" href="../../handler/css/style.css?v=<? echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
