@@ -50,7 +50,7 @@
             </div>
         </header>
 
-        <header class = \"header-mobile\"> 
+        <header class = \"header-mobile\" id=\"header-mobile\"> 
             <img class=\"logo-header-mobile\" src=\"{$dirLogo}\" alt=\"Let's API Logo\"> 
 
             <a href=\"{$pathLogin}\" class=\"push-Mleft\"><button class=\"login-mobile\">Login</button></a>

@@ -1,17 +1,48 @@
 const toggleButton = document.getElementById("togglebtn");
-const iniHeaderMobile = document.getElementById("mobile-dropdown");
+const headerMobile = document.getElementById("header-mobile");
+const dropdownMobile = document.getElementById("mobile-dropdown");
 
 var visibleState = false;
 
 toggleButton.addEventListener('click', () => {
     if(visibleState == false){
-        iniHeaderMobile.style.display = 'flex';
+        fadeIn(dropdownMobile);
+        
+        headerMobile.style.borderBottom = 'none';
         visibleState = true;
     } else {
-        iniHeaderMobile.style.display = 'none';
+        fadeOut(dropdownMobile);
+        
+        headerMobile.style.borderBottom = '1px solid white';
         visibleState = false;
     }
 });
+
+function fadeOut(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+
+function fadeIn(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'flex';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 10);
+}
 
 function getScreenWidth() {
     var w = window,
@@ -23,11 +54,15 @@ function getScreenWidth() {
 }
 
 window.onresize = function() {
-    if (getScreenWidth() > 700) {
-        iniHeaderMobile.style.display = 'none';
+    if (getScreenWidth() > 700) { // If 
+        dropdownMobile.style.display = 'none';
+
+        headerMobile.style.borderBottom = '1px solid white';
     } else 
     if (getScreenWidth() < 700 && visibleState == true) { 
-        iniHeaderMobile.style.display = 'flex';
+        fadeIn(dropdownMobile);
+
+        headerMobile.style.borderBottom = 'none';
     } else {
         visibleState = false;
     }

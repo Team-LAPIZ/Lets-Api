@@ -16,6 +16,7 @@
         $dirPrivacyPolicy .= "webinfo/privacypolicy.php";
 
         echo "
+        <div class = \"gap\"></div>
         <footer class=\"footer-basic\">
             <div class=\"social\">
                 <a href=\"https://github.com/Team-LAPIZ\" target=\"_blank\" rel=\"noreferrer noopener\">
