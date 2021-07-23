@@ -1,5 +1,5 @@
 <?php 
-    function headerImport($dirJump, $pathLogin, $mode = 0){ 
+    function headerImport($dirJump, $pathLogin){ 
         $dirHome = "";
         $dirPost = "";
         $dirAbout = "";
