@@ -97,8 +97,8 @@ window.onresize = function() {
         headerMobile.style.borderBottom = '1px solid white';
     } else 
     if (getScreenWidth() < 700 && visibleState == true) { 
-        fadeInDropdown(dropdownMobile, dropdownItem);
-
+        dropdownMobile.style.display = 'flex';
+        
         headerMobile.style.borderBottom = 'none';
     } else {
         visibleState = false;
