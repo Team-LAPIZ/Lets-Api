@@ -197,7 +197,7 @@
 
     <?php 
         include_once "../../handler/include/footer.php";
-        footerImport(2, "Verify Email from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
+        footerImport(2, "pages/mail/verify.php","This service is made by using API call from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
     ?>
 
 </body>

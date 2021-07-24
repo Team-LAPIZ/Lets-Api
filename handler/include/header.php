@@ -5,7 +5,7 @@
         $dirAbout = "";
         $dirTeam = "";
         $dirLogo = "";
-        $loadScript = "";
+        $loadHeaderScript = "";
 
         for ($i=0; $i < $dirJump; $i++) { 
             $dirHome .= "../";
@@ -13,7 +13,7 @@
             $dirAbout .= "../";
             $dirTeam .= "../";
             $dirLogo .= "../";
-            $loadScript .= "../";
+            $loadHeaderScript .= "../";
         }
 
         $time = time();
@@ -22,15 +22,14 @@
         $dirAbout .= "webinfo/about.php";
         $dirTeam .= "webinfo/team.php";
         $dirLogo .= "src/kite.png";
-        $loadScript .= "handler/script/headerButton.js";
-        $loadScript .= "?v={$time}";
+        $loadHeaderScript .= "handler/script/headerButton.js?v={$time}";
 
         if($dirJump == 0) { 
             $dirPost = "./post.php";
         }
 
         echo "
-        <header class =\"header\">
+        <header class =\"header slideFromTop\">
             
             <img class=\"logo-header\" src=\"{$dirLogo}\" alt=\"Let's API Logo\">
 
@@ -70,7 +69,7 @@
             </div>
         </header>
 
-        <header class = \"header-mobile\" id=\"header-mobile\"> 
+        <header class = \"header-mobile slideFromTop\" id=\"header-mobile\"> 
             <img class=\"logo-header-mobile\" src=\"{$dirLogo}\" alt=\"Let's API Logo\"> 
 
             <a href=\"{$pathLogin}\" class=\"push-Mleft\"><button class=\"login-mobile\">Login</button></a>
@@ -83,7 +82,7 @@
             </a>
         </header>
 
-        <header class = \"mobile-menu\" id=\"mobile-dropdown\">
+        <header class = \"mobile-menu slidePush\" id=\"mobile-dropdown\">
             <ul class =\"list-inline-mobile\" id=\"dropdown-list\">
                 <li class=\"list-inline-item-mobile\">
                     <div class=\"icon-with-text\">
@@ -91,20 +90,20 @@
                         <a href=\"{$dirHome}\">Home</a>
                     </div>
                 </li>
-                <li class=\"list-inline-item-mobile push-Mleft-little\">
+                <li class=\"list-inline-item-mobile\">
                     <div class=\"icon-with-text\">
                         <img src=\"https://img.icons8.com/material-outlined/20/000000/news.png\"/>
                         <a href=\"{$dirPost}\">Posts</a>
                     </div>
                 </li>
-                <li class=\"list-inline-item-mobile push-Mleft-little\">
+                <li class=\"list-inline-item-mobile\">
                     <div class=\"icon-with-text\">
                         <img src=\"https://img.icons8.com/material-outlined/20/000000/about.png\"/>
                         <a href=\"{$dirAbout}\">About</a>
                     </div>    
                 
                 </li>
-                <li class=\"list-inline-item-mobile push-Mleft-little\">
+                <li class=\"list-inline-item-mobile\">
                     <div class=\"icon-with-text\">
                         <img src=\"https://img.icons8.com/material-outlined/15/000000/user-group-man-woman.png\"/>
                         <a href=\"{$dirTeam}\">Team</a>
@@ -114,7 +113,7 @@
         </header>
 
         
-        <script src=\"{$loadScript}\"></script>
+        <script src=\"{$loadHeaderScript}\"></script>
         ";
     }
 ?>

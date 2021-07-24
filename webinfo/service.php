@@ -26,7 +26,7 @@
 
     <?php 
         include_once "../handler/include/footer.php";
-        footerImport(1);
+        footerImport(1, "webinfo/service.php");
     ?>
 
 </body>

@@ -100,7 +100,7 @@
 
     <?php 
         include_once "../../handler/include/footer.php";
-        footerImport(2);
+        footerImport(2, "pages/movie/search.php");
     ?>
 
 </body>

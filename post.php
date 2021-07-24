@@ -26,7 +26,7 @@
 
     <?php 
         include_once "handler/include/footer.php";
-        footerImport(0);
+        footerImport(0, "post.php");
     ?>
 
 </body>

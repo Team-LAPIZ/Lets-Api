@@ -17,8 +17,9 @@
         headerImport(0, "pages/auth/login.php");
     ?>
     
-    <h1 class="margin-top">Browse Around The Web</h1>
+    <h1 class="margin-top"></h1>
     <div class="content">
+        <h1 class="margin-top">Browse Around The Web</h1>
         <div class="container">
             <a href="pages/movie/search.php">
                 <div>
@@ -51,7 +52,7 @@
 
     <?php 
         include_once "handler/include/footer.php";
-        footerImport(0);
+        footerImport(0, "index.php");
     ?>
 
 </body>
