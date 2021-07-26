@@ -14,9 +14,9 @@
     
     <meta property=\"og:title\" content=\"Let's API\">
     <meta property=\"og:type\" content=\"website\">
-    <meta property=\"og:site_name\" content=\"letsapi.infinityfreeapp.com\">
-    <meta property=\"og:image\" content=\"https://letsapi.infinityfreeapp.com/src/kite.png\">
-    <meta property=\"og:url\" content=\"https://letsapi.infinityfreeapp.com/{$path}\">
+    <meta property=\"og:site_name\" content=\"letsapi.me\">
+    <meta property=\"og:image\" content=\"https://letsapi.me/src/kite.png\">
+    <meta property=\"og:url\" content=\"https://letsapi.me/{$path}\">
     <meta property=\"og:description\" content=\"$description\">
 
     <link rel=\"stylesheet\" href=\"{$cssPath}?v={$time}\">

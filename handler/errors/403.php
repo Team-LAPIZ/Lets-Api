@@ -16,6 +16,7 @@
         headerImport(2, "../../pages/auth/login.php");
     ?>
 
+    <h1 class="gap-top"></h1>
     <div class="content">
         <h1 class="margin-top">403 - Forbidden</h1>
         <p>You don't have permission to access this resource.</p>

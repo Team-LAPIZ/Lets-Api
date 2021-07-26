@@ -1,5 +1,5 @@
 # Repository For Let's API
-<strong>[Currently in development...](https://letsapi.infinityfreeapp.com/index.php)</strong>
+<strong>[Currently in development...](http://letsapi.me/)</strong>
 
 # Developer
 1. [@Azzam](https://github.com/Azzamubaidillah)

@@ -17,7 +17,7 @@
         headerImport(1, "../pages/auth/login.php");
     ?>
     
-    <h1 class="margin-top"></h1>
+    <h1 class="gap-top"></h1>
     <div class="content">
         <h1 class="margin-top">About This Website</h1>
         <div class="p-container">

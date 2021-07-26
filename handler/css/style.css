@@ -1,3 +1,4 @@
+/* original html element */
 html,
 body {
     font-family: 'Manrope', sans-serif;
@@ -18,6 +19,21 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28pt;
+}
+
+img {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+p {
+    text-align: center;
 }
 
 /* pushes */
@@ -119,10 +135,11 @@ a {
     flex-direction: column;
     justify-content: space-between;
     display: none;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
     background-color: white;
     border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 1%;
 }
 
 .mobile-menu .list-inline-mobile {
@@ -312,13 +329,11 @@ a {
 }
 
 /* content (mostly) */
-h1 {
+.margin-top {
     margin-top: 20px;
-    text-align: center;
-    font-size: 28pt;
 }
 
-.margin-top {
+.gap-top {
     margin-top: 20px;
 }
 
@@ -336,23 +351,34 @@ h1 {
     flex-wrap: wrap;
 }
 
-img {
-    max-width: 60%;
-    max-height: 60%;
-}
-
-p {
-    text-align: center;
-}
-
 .p-justify {
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
 }
 
+.bordered-top {
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+.bordered-bottom {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
 .bigger {
     font-size: 13pt;
+}
+
+.height-smaller {
+    line-height: 0.7cm;
+}
+
+.height-unset { 
+    line-height: unset;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .p-container {
@@ -364,6 +390,15 @@ p {
     margin-right: auto;
     max-width: 800px;
     line-height: 1cm;
+    margin-bottom: 0px;
+}
+
+.list-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    padding-left: 20px;
 }
 
 .rectangle {
@@ -647,7 +682,7 @@ p {
 
 .slideFromBottom {
     animation-name: slideFromBottom;
-    animation-duration: 2s;
+    animation-duration: 4s;
 }
 
 .slideFromTop {
@@ -656,8 +691,18 @@ p {
 }
 
 .slidePush {
-    animation-duration: 2s;
+    animation-duration: 0.3s;
     animation-name: slidePush;
+}
+
+.slideunPush {
+    animation-duration: 2s;
+    animation-name: slideunPush;
+}
+
+/* external */
+.darkmode-toggle {
+    margin-bottom: 5px; /* somehow added a shadow like effect */
 }
 
 /* custom scrollbar - only on desktop view */
@@ -736,6 +781,10 @@ p {
 
     .margin-top {
         margin-top: 20px;
+    }
+
+    .gap-top {
+        margin-top: 0px;
     }
 
     .container {
@@ -876,7 +925,7 @@ p {
 
 @keyframes slideFromBottom {
     from {
-        margin-top: 4.5%;
+        margin-top: 8%;
     }
   
     to {
@@ -900,6 +949,6 @@ p {
     }
   
     to {
-        margin-bottom: 1.5%;
+        margin-bottom: 1%;
     }
 }

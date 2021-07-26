@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>404 - Page Not Found Let's API</title>
+    <title>401 - Unauthorized Let's API</title>
     <?php 
         include_once "../include/meta.php";
         importMeta("handler/errors/403.php", "../css/style.css","API, Forbidden, 404", "404 - Page Not Found. Let's API is A website that utilize many API(s) such as email verification, movies searching, anime, etc.");
@@ -19,8 +19,8 @@
 
     <h1 class="gap-top"></h1>
     <div class="content">
-        <h1 class="margin-top">404 - Page Not Found</h1>
-        <p>The page you were looking for could not be found! If you entered the URL manually, please double check what you’ve entered.</p>
+        <h1 class="margin-top">401 - Unauthorized</h1>
+        <p>Sorry, your request could not be processed. You do not have the valid authentication credentials for the target resource.</p>
         <p><a class="link" href="../..">Go back to home</a></p>
     </div>
 

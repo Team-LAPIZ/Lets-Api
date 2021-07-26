@@ -16,8 +16,9 @@
         include_once "handler/include/header.php";
         headerImport(0, "pages/auth/login.php");
     ?>
-    
-    <h1 class="margin-top"></h1>
+
+
+    <h1 class="gap-top"></h1>
     <div class="content">
         <h1 class="margin-top">Browse Around The Web</h1>
         <div class="container">
@@ -44,7 +45,7 @@
                     <div class="rectangle">
                         <img src="src/email.png" alt="email verification">
                     </div>
-                    <p>Email verification</p>
+                    <p>Email Verification</p>
                 </div>
             </a>
         </div>

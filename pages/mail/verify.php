@@ -20,7 +20,7 @@
 
     <div class="content">
         <div class="search-container">
-            <h1>Verify email address</h1>
+            <h1>Verify Email Address</h1>
             <form method="post">
                 <div class="wrapper">
                     <input class="search" placeholder="Enter email address here...." type="text" name="emailToCheck"
@@ -56,7 +56,7 @@
             </div>
 
             <div class="validation-container">
-                <h4>Quality Score</h4>
+                <h4>Quality score</h4>
                 <div class="box">
                     <p class="box-text" id="quality">-</p>
                 </div>
@@ -197,7 +197,7 @@
 
     <?php 
         include_once "../../handler/include/footer.php";
-        footerImport(2, "pages/mail/verify.php","This service is made by using API call from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
+        footerImport(2, "pages/mail/verify.php", "This service is made by using API call from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
     ?>
 
 </body>
