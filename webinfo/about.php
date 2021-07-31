@@ -24,7 +24,8 @@
             <p class="p-justify">
                 <b>Let's API</b> is a tool website that utilize many APIs. The aim of this website is to help people by providing an easy to use tools by using public APIs hence the name
                 let'sapi. Though, the tools that this website provide does not only come from APIs, there are some tools that is only script like web scraping and stuff. This website will
-                keep growing as we grow so you can expect more feature along the way. We also provide feature request that can be posted in the <a class="link-subtle" href="../post.php">posts</a> section.
+                keep growing as we grow so you can expect more feature along the way. You can also contribute by doing a pull request or maybe just post your request
+                on the comment in the <a class="link-subtle" href="../post.php">posts</a> section.
             </p>
             <p class="p-justify">
                 This website is made by <b>Team Lapiz</b> mainly just for fun and learning. We created this website as a way to test and improve our ability as a student.

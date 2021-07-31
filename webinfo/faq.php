@@ -33,8 +33,9 @@
                 <b>A : </b>This web is completely open source. You can take a look at our codes if you are still not convinced.<br>
                 <b>Q : Is this site only using API as its main service?</b><br>
                 <b>A : </b>No, there is also stuff like web scraping and script that we use for our services.<br>
-                <b>Q : Can we request a feature?</b><br>
-                <b>A : </b>Yes you can, we will add a posts page and you can post your request there. You can also contact us by using the email linked in the <a class="link-subtle" href="#footer">footer</a> below.
+                <b>Q : Can we request or contribute a feature?</b><br>
+                <b>A : </b>Yes you can, this web is open source we allow pull request from you guys. You can check out our github and do a pull request there or 
+                you can just post your request on the feature request comment in the posts section. You can also contact us by using the email linked in the <a class="link-subtle" href="#footer">footer</a> below, our github is also located there.
             </p>
         </div>
     </div>
