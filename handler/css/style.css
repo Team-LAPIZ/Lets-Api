@@ -516,7 +516,7 @@ p {
     background: rgba(253, 250, 250, 0.671);
 }
 
-.search-container {
+.service-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -530,7 +530,7 @@ p {
     width: 662px;
 }
 
-.search {
+.service-container-search {
     outline: 0;
     width: 100%;
     padding: 2px 23px 2px 30px;

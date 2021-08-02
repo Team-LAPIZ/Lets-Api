@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once "../../handler/include/meta.php";
-        importMeta("services/anime/search.php", "../../handler/css/style.css", "Verify Email - Let's API",
+        importMeta("services/anime/search.php", "../../handler/css/style.css", "Search an Anime - Let's API",
         "Anime, Scraper, API, LetsAPI, Tools", "Search an anime by using MAL-Scraper by Let's API, A website that utilize many API(s) and tools.");
     ?>
 </head>
@@ -17,12 +17,11 @@
     ?>
 
     <div class="content">
-        <div class="search-container">
+        <div class="service-container">
             <h1>Search Anime</h1>
             <form method="get">
                 <div class="wrapper">
-                    <input class="search" placeholder="Search Anime...." type="text" name="searchAnime"
-                        title="Please enter a valid anime to search!" minlength="1" required>
+                    <input class="service-container-search" placeholder="Search Anime...." type="text" name="searchAnime" minlength="1" required>
                     <button class="button" name="clickButton">Search</button>
                 </div>
             </form>

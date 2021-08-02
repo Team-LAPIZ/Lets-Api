@@ -16,11 +16,11 @@
         headerImport(2);
     ?>
     <div class="content">
-        <div class="search-container">
+        <div class="service-container">
             <h1>Search Movie</h1>
             <form method="post">
                 <div class="wrapper">
-                    <input class="search" placeholder="Search Movie Here..." type="text" required>
+                    <input class="service-container-search" placeholder="Search Movie Here..." type="text" required>
                     <button class="button">Search</button>
                 </div>
             </form>

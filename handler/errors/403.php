@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>403 - Forbidden Let's API</title>
     <?php 
         include_once "../include/meta.php";
-        importMeta("handler/errors/403.php", "../css/style.css","API, Forbidden, 403", "403 - FORBIDDEN. Let's API is A website that utilize many API(s) such as email verification, movies searching, anime, etc.");
+        importMeta("handler/errors/403.php", "../css/style.css", "403 - Forbidden Let's API",
+        "API, Forbidden, 403", "403 - FORBIDDEN. Let's API is A website that utilize many API(s) such as email verification, movies searching, anime, etc.");
     ?>
 </head>
 

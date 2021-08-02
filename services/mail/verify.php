@@ -18,23 +18,23 @@
     ?>
 
     <div class="content">
-        <div class="search-container">
+        <div class="service-container">
             <h1>Verify Email Address</h1>
-            <form method="post">
+            <form method="post" id="verify-email">
                 <div class="wrapper">
-                    <input class="search" placeholder="Enter email address here...." type="text" name="emailToCheck"
+                    <input class="service-container-search" placeholder="Enter email address here...." type="text" name="emailToCheck"
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please enter a valid email address"
                         minlength="3" required>
-                    <button class="button" name="clickbuttonver">Verify</button>
+                    <button class="button" name="clickbuttonver" id="verifyButton">Verify</button>
                 </div>
                 <div class="center-recaptcha">
                 <?php 
                 require_once '../../handler/require/loadenv.php';
                 echo"
-                    <div class=\"g-recaptcha\" data-sitekey=\"{$_ENV["recaptchaSiteKey"]}\"></div>
+                    <div class=\"g-recaptcha\" data-sitekey=\"{$_ENV["recaptchaSiteKey"]}\" data-callback=\"enableButton\" data-expired-callback=\"disableButton\"></div>
                 " 
                 ?>
-                    
+
                 </div>
             </form>
         </div>
@@ -110,6 +110,26 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+    var disabled = true;
+    function enableButton(){
+        disabled = false;
+    }
+
+    function disableButton() {
+        disabled = true;
+    }
+
+    document.getElementById('verify-email').onsubmit = function(e) {
+        if(disabled){
+            alert("Please Verify The Recaptcha First!"); 
+            e.preventDefault();
+        } else {
+            return true;
+        }
+    }
+    </script>
 
     <?php 
     require_once "../../handler/require/verifyMail.php";

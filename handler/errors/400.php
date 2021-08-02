@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>400 - Bad Reqeust Let's API</title>
     <?php 
         include_once "../include/meta.php";
-        importMeta("handler/errors/403.php", "../css/style.css","API, Forbidden, 404", "404 - Page Not Found. Let's API is A website that utilize many API(s) such as email verification, movies searching, anime, etc.");
+        importMeta("handler/errors/403.php", "../css/style.css", "400 - Bad Reqeust Let's API",
+        "API, Forbidden, 404", "404 - Page Not Found. Let's API is A website that utilize many API(s) such as email verification, movies searching, anime, etc.");
     ?>
-
 </head>
 
 <body class="background bulat1 bulat2">
