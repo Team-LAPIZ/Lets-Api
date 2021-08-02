@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Verify Email - Let's API</title>
     <?php 
         include_once "../../handler/include/meta.php";
-        importMeta("pages/mail/verify.php", "../../handler/css/style.css", "Email, API, LetsAPI, Tools", "Check an email address by Let's API, A website that utilize many API(s).");
+        importMeta("pages/mail/verify.php", "../../handler/css/style.css", "Verify Email - Let's API",
+        "Email, API, LetsAPI, Tools", "Check an email address by Let's API, A website that utilize many API(s).");
     ?>
-    
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
@@ -15,7 +14,7 @@
 
     <?php 
         include_once "../../handler/include/header.php";
-        headerImport(2, "../auth/login.php");
+        headerImport(2);
     ?>
 
     <div class="content">

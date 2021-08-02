@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Feature Request - Let's API</title>
     <?php 
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/about.php", "../handler/css/style.css", "Request, LetsAPI, Tools", "Feature request section of Let's API.");
+        importMeta("webinfo/about.php", "../handler/css/style.css", "Feature Request - Let's API",
+        "Request, LetsAPI, Tools", "Feature request section of Let's API.");
     ?>
-
 </head>
 
 <body class="background bulat1 bulat2">

@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-    <title>Browse Movie - Let's API'</title>
     <?php 
         include_once "../../handler/include/meta.php";
-        importMeta("pages/movie/search.php", "../../handler/css/style.css", "Movie, API, LetsAPI, Tools", "Movie Searching by Let's API, A website that utilize many API(s)");
+        importMeta("pages/movie/search.php", "../../handler/css/style.css", "Browse Movie - Let's API",
+        "Movie, API, LetsAPI, Tools", "Movie Searching by Let's API, A website that utilize many API(s)");
     ?>
-
 </head>
 
 <body class="background bulat1 bulat2">
 
     <?php 
         include_once "../../handler/include/header.php";
-        headerImport(2, "../auth/login.php");
+        headerImport(2);
     ?>
     <div class="content">
         <div class="search-container">

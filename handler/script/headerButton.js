@@ -15,7 +15,7 @@ toggleButton.addEventListener('click', () => {
     } else {
         fadeOutDropdown(dropdownMobile, dropdownItem);
         
-        headerMobile.style.borderBottom = '1px solid white';
+        headerMobile.style.borderBottom = '1px solid #DDDDDD;';
         visibleState = false;
     }
 });
@@ -94,7 +94,7 @@ window.onresize = function() {
     if (getScreenWidth() > 700) { // If 
         dropdownMobile.style.display = 'none';
 
-        headerMobile.style.borderBottom = '1px solid white';
+        headerMobile.style.borderBottom = '1px solid #DDDDDD;';
     } else 
     if (getScreenWidth() < 700 && visibleState == true) { 
         dropdownMobile.style.display = 'flex';

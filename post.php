@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Post - Let's API</title>
     <?php 
         include_once "handler/include/meta.php";
-        importMeta("post.php", "handler/css/style.css", "Team, LetsAPI, Tools", "Post section of Let's API.");
+        importMeta("post.php", "handler/css/style.css", "Post - Let's API", "Team, LetsAPI, Tools",
+        "Post section of Let's API. Contains website news/articles and place to post feedback and request.");
     ?>
 </head>
 
@@ -13,7 +13,7 @@
 
     <?php 
         include_once "handler/include/header.php";
-        headerImport(0, "pages/auth/login.php");
+        headerImport(0);
     ?>
 
     <?php // functions for this file
@@ -25,7 +25,7 @@
                 }
             }
             $sufix = 'posts';
-            if($amount == 0 || 1) { 
+            if($amount == 0 || $amount == 1) { 
                 $sufix = 'post';
             } 
             echo $amount . ' ' . $sufix;

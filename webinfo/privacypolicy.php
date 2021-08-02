@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Privacy Policy - Let's API</title>
     <?php 
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/privacypolicy.php", "../handler/css/style.css", "Privacy Policy, LetsAPI, Tools", "Privacy Policy section of Let's API.");
+        importMeta("webinfo/privacypolicy.php", "../handler/css/style.css", "Privacy Policy - Let's API",
+        "Privacy Policy, LetsAPI, Tools", "Privacy Policy section of Let's API.");
     ?>
-
 </head>
 
 <body class="background bulat1 bulat2">

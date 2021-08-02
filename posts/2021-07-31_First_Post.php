@@ -1,17 +1,14 @@
-<!-- Line 2 contains the description for each posts
+<?php /* Line 2 contains description of the post
 Welcome to Letsapi! Our first posts.
--->
+*/?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php
         $current_file_name = str_replace("_", " ", substr(basename($_SERVER['PHP_SELF']), 0, -4));
-        echo "
-        <title>$current_file_name</title>
-        ";
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/about.php", "../handler/css/style.css", "Posts, LetsAPI, News", "Welcome to Letsapi! Our first posts.");
+        importMeta("webinfo/about.php", "../handler/css/style.css", $current_file_name, "Posts, LetsAPI, News", "Welcome to Letsapi! Our first posts.");
     ?>
 
 </head>

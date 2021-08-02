@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>About - Let's API</title>
     <?php 
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/about.php", "../handler/css/style.css", "About, LetsAPI, Tools", "About section of Let's API.");
+        importMeta("webinfo/about.php", "../handler/css/style.css", "About Let's API",
+        "About, LetsAPI, Tools", "About section of Let's API.");
     ?>
-
 </head>
 
 <body class="background bulat1 bulat2">

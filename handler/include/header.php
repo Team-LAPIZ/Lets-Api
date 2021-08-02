@@ -1,10 +1,11 @@
 <?php 
-    function headerImport($dirJump, $pathLogin){ 
+    function headerImport($dirJump){ 
         $dirHome = "";
         $dirPost = "";
         $dirAbout = "";
         $dirTeam = "";
         $dirLogo = "";
+        $dirLogoText = "";
         $loadHeaderScript = "";
 
         for ($i=0; $i < $dirJump; $i++) { 
@@ -13,6 +14,7 @@
             $dirAbout .= "../";
             $dirTeam .= "../";
             $dirLogo .= "../";
+            $dirLogoText .= "../";
             $loadHeaderScript .= "../";
         }
 
@@ -22,6 +24,7 @@
         $dirAbout .= "webinfo/about.php";
         $dirTeam .= "webinfo/team.php";
         $dirLogo .= "src/kite.png";
+        $dirLogoText .= "src/logotext.png";
         $loadHeaderScript .= "handler/script/headerButton.js?v={$time}";
 
         if($dirJump == 0) { 
@@ -33,7 +36,7 @@
             
             <img class=\"logo-header\" src=\"{$dirLogo}\" alt=\"Let's API Logo\">
 
-            <ul class =\"list-inline\">
+            <ul class =\"list-inline header-centering\">
                 <li class=\"list-inline-item\">
                     <div class=\"icon-with-text\">
                         <a href=\"{$dirHome}\" onmouseover=\"fadeInBorder(this)\" onmouseout=\"fadeOutBorder(this)\">
@@ -64,15 +67,14 @@
                 </li>
             </ul>
 
-            <div class=\"login-push\">
-                <a href=\"{$pathLogin}\"><button class=\"login\">Login</button></a>
+            <div class=\"header-right-push\">
+                <a href=\"{$dirHome}\"><img class=\"logo-text\" src=\"{$dirLogoText}\" alt=\"Let's API Text Logo\"></a>
             </div>
         </header>
 
         <header class = \"header-mobile slideFromTop\" id=\"header-mobile\"> 
             <img class=\"logo-header-mobile\" src=\"{$dirLogo}\" alt=\"Let's API Logo\"> 
-
-            <a href=\"{$pathLogin}\" class=\"push-Mleft\"><button class=\"login-mobile\">Login</button></a>
+            <img class=\"logo-text-mobile push-Mleft\" src=\"{$dirLogoText}\" alt=\"Let's API Text Logo\"> 
 
             <a class=\"toggle-button\" id=\"togglebtn\">
                 <span class=\"bar\"></span>
@@ -116,7 +118,7 @@
         <script src=\"{$loadHeaderScript}\"></script>
         ";
 
-
+        // Load darkmode script
         echo "
         <script src=\"https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js\"></script>
         <script>

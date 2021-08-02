@@ -81,10 +81,21 @@ p {
     opacity: 0.8;
 }
 
-.login-push {
+.header-right-push {
     margin-left: auto;
 }
 
+.logo-text {
+    max-width: 120px;
+    max-height: 25px;
+    padding-right: 10px;
+}
+
+.header-centering {
+    padding-right: 21px;
+}
+
+/* archived
 .login {
     width: 93px;
     height: 35px;
@@ -97,13 +108,19 @@ p {
 
 .login:hover {
     background: #06422a;
-}
+} */
 
 /* header-mobile */
 .logo-header {
     max-width: 46px;
     max-height: 46px;
     padding-left: 10px;
+}
+
+.logo-text-mobile {
+    width: auto;
+    height: 25px;
+    margin-right: 5px;
 }
 
 .header-mobile {
@@ -121,14 +138,14 @@ p {
     margin-left: 15px;
 }
 
-.login-mobile {
+/* .login-mobile {
     width: 93px;
     height: 35px;
     background: #00623B;
     border-radius: 6px;
     color: #fff;
     cursor: pointer;
-}
+} */
 
 .mobile-menu {
     margin: 0px;
@@ -157,7 +174,8 @@ p {
     /* li */
     cursor: pointer;
     font-weight: bolder;
-    padding: 0px 50px 10px;
+    padding: 0px 40px 10px;
+    margin-right: 12px;
     display: inline-block;
     align-items: center;
     justify-content: space-between;
@@ -343,14 +361,6 @@ p {
     animation: fadeIn 1s;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    flex-wrap: wrap;
-}
-
 .p-justify {
     margin-left: auto;
     margin-right: auto;
@@ -457,6 +467,35 @@ p {
     padding: 0 10px;
     align-items: start;
     background-color: white;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+}
+
+.caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+
+    /* padding and stuff */
+    padding-top: 10px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .rectangle {
@@ -861,11 +900,13 @@ p {
 }
 
 /* desktop header stretch  */
-@media (max-width: 800px) {
+@media (max-width: 860px) {
     .header {
         padding: 14px 0px;
     }
+}
 
+@media (max-width: 800px) {
     .p-container {
         padding-left: 10px;
         padding-right: 10px;
@@ -934,14 +975,14 @@ p {
 
 @media (max-width: 476px) {
     .mobile-menu .list-inline-mobile .list-inline-item-mobile {
-        padding-right: 40px;
-        padding-left: 40px;
+        margin-right: 15px;
+        padding-left: 30px;
     }
 }
 
 @media (max-width: 426px) {
     .mobile-menu .list-inline-mobile .list-inline-item-mobile {
-        margin-right: 15px;
+        margin-right: 10px;
         padding-left: 30px;
     }
 

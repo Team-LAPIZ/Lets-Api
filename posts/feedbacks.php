@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Feedback - Let's API</title>
     <?php 
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/about.php", "../handler/css/style.css", "Feedback, LetsAPI, Tools", "Feedback section of Let's API.");
+        importMeta("webinfo/about.php", "../handler/css/style.css", "Feedback - Let's API", "Feedback, LetsAPI, Tools", "Feedback section of Let's API.");
     ?>
-
 </head>
 
 <body class="background bulat1 bulat2">
