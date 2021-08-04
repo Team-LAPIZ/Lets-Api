@@ -328,7 +328,7 @@ p {
 }
 
 .link-subtle {
-    color:rgba(145, 155, 160, 0.699);
+    color: rgba(145, 155, 160, 0.699);
     font-weight: bold;
 }
 
@@ -517,6 +517,89 @@ p {
     margin-right: auto;
 }
 
+.item-n-img-wrap {
+    margin: 30px 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item-img {
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    margin: 0;
+}
+
+.item-caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+
+    /* padding and stuff */
+    padding-top: 0;
+    font-size: small;
+    font-weight: bold;
+    max-width: 185px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img__wrap {
+    position: relative;
+    margin: 0;
+    width: 185px;
+    height: 260px;
+}
+
+.img__description_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(36, 62, 206, 0.6);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img__description {
+    transition: .2s;
+    transform: translateY(1em);
+    font-size: smaller;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.img__wrap:hover .img__description {
+    transform: translateY(0);
+}
+
+.img__img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 260px;
+    object-fit: cover;
+}
+
 .rectangle {
     display: flex;
     justify-content: center;
@@ -679,15 +762,6 @@ p {
     margin-bottom: 20px;
 }
 
-.img-input {
-    margin-top: 48px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-}
-
 .login-box img {
     width: 32px;
     height: 32px;
@@ -811,7 +885,7 @@ p {
     line-height: 1.0cm;
 }
 
-.height-unset { 
+.height-unset {
     line-height: unset;
 }
 
@@ -861,11 +935,13 @@ p {
 
 /* external */
 .darkmode-toggle {
-    margin-bottom: 5px; /* somehow added a shadow like effect */
+    margin-bottom: 5px;
+    /* somehow added a shadow like effect */
 }
 
 /* custom scrollbar - only on desktop view */
 @media only screen and (min-device-width: 736px) {
+
     /* width */
     ::-webkit-scrollbar {
         width: 5px;
@@ -878,32 +954,32 @@ p {
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: #145DA0; 
+        background: #145DA0;
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: #0C2D48; 
+        background: #0C2D48;
     }
 
     /* Track */
     ::-webkit-scrollbar-track {
-        background: #F1F1F1; 
+        background: #F1F1F1;
     }
 
     /* The track NOT covered by the handle. */
     ::-webkit-scrollbar-track-piece {
-        background: #ffffff; 
+        background: #ffffff;
     }
 
     /* Corner */
     ::-webkit-scrollbar-corner {
-        background: #999; 
+        background: #999;
     }
 
     /* Resizer */
     ::-webkit-resizer {
-        background: #111; 
+        background: #111;
     }
 }
 
@@ -1005,12 +1081,13 @@ p {
         padding-left: 30px;
     }
 
-    .search {
+    .service-container-search {
         margin-left: 30px;
     }
 
     .button {
         margin-right: 30px;
+        font-size: small;
     }
 
     .box {
@@ -1023,7 +1100,7 @@ p {
 }
 
 @media (max-width: 400px) {
-    .search {
+    .service-container-search {
         margin-left: 60px;
         padding-left: 10px;
     }
@@ -1092,7 +1169,7 @@ p {
     from {
         margin-top: 8%;
     }
-  
+
     to {
         margin-top: 0%;
     }
@@ -1102,7 +1179,7 @@ p {
     from {
         margin-bottom: 4.5%;
     }
-  
+
     to {
         margin-bottom: 0%;
     }
@@ -1112,7 +1189,7 @@ p {
     from {
         margin-bottom: 0%;
     }
-  
+
     to {
         margin-bottom: 1%;
     }

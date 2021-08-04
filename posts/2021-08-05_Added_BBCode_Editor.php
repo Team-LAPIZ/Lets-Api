@@ -1,5 +1,5 @@
 <?php $desc = "
-Welcome to Letsapi! Our first posts.
+We have added a bbcode text editor by using script from sceditor.com, more feature is coming!
 "?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,14 +23,14 @@ Welcome to Letsapi! Our first posts.
     <h1 class="gap-top"></h1>
     <div class="content">
     <a href="../post.php"><img class="back-arrow" src="../src/arrow.png" alt="back"> Go back to posts</a>
-        <h1 class="margin-top post-title">First Post</h1>
+        <h1 class="margin-top post-title">Added BBCode Editor</h1>
         <div class="post-info">
-            Posted by Dadangdut33 at 2021-7-31 | <a href="#disqus_thread" class="disqus-comment-count" data-disqus-url="http//letsapi.me/posts/<?php echo substr(basename($_SERVER['PHP_SELF']), 0, -4)?>" data-disqus-identifier="posts/<?php echo substr(basename($_SERVER['PHP_SELF']), 0, -4)?>">0 Comment</a>
+            Posted by Dadangdut33 at 2021-8-5 | <a href="#disqus_thread" class="disqus-comment-count" data-disqus-url="http//letsapi.me/posts/<?php echo substr(basename($_SERVER['PHP_SELF']), 0, -4)?>" data-disqus-identifier="posts/<?php echo substr(basename($_SERVER['PHP_SELF']), 0, -4)?>">0 Comment</a>
         </div>
         <div class="p-container">
             <p class="p-justify">
-                Welcome to our website "LetsAPI", This website was made as a way to improve our skill as a student, in the near future as we are learning we hope to bring more
-                feature to this site so this site can be more useful than ever. This might just be a simple post, but it marks the beginning of a journey.
+                We have added a bbcode text editor by using the script from <a href="http://sceditor.com" target="_blank" rel="noreferrer noopener">sceditor.com</a>. more feature is coming! I'm currently working on
+                the anime section and currently trying to improve the looks of this site. If things go smooth, the update will be live soon. Stay tune... :D
             </p>
         </div>
         <div class="p-container p-gap">

@@ -38,7 +38,7 @@ RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
 RewriteRule .* - [L,R=404]
 
 # Error Handling
-# Bad Reqeust
+# Bad Request
 ErrorDocument 400 http://letsapi.me/handler/errors/400
 
 # Unauthorized

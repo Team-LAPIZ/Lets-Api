@@ -3,7 +3,7 @@
 function disqus_thread($pageURL, $pageIdentifier) {
     echo " 
         <div id = \"disqus_thread\">
-            <h4 class=\"comments-holder\"><a href=\"#\" onclick=\"loadDisqus();return false;\">Show/Post Comments</a></h4>
+            <h4 class=\"comments-holder\"><a href=\"#\" onclick=\"loadDisqus();return false;\">Show/Load Comments</a></h4>
         </div>
  
         <script>

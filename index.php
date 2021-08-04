@@ -24,10 +24,10 @@
             <?php 
                 // arrays containing all the features
                 $toolLists = array(
-                    array("movie/search.php" ,"tmdb.png", "tmdb", "Search for Movie"),
-                    array("anime/search.php" ,"mal.png", "mal", "Search for Anime"),
-                    array("anime/recommend.php" ,"mal.png", "mal", "Get Anime Recommendation"),
-                    array("mail/verify.php" ,"email.png", "Email Verification", "Email Verification")
+                    array("../#" ,"tmdb.png", "tmdb", "Search for Movie (work in progress)"),
+                    array("../#" ,"mal.png", "mal", "Search for Anime (work in progress)"),
+                    array("mail/verify.php" ,"email.png", "Email Verification", "Email Verification"),
+                    array("texteditor/bbcode.php" ,"text.png", "BBCode Editor", "BBCode Editor")
                 ); 
 
                 // displaying the features

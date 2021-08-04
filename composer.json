@@ -1,6 +1,5 @@
 {
     "require": {
-        "vlucas/phpdotenv": "^5.3",
-        "rl404/mal-scraper": "^1.5"
+        "vlucas/phpdotenv": "^5.3"
     }
 }
