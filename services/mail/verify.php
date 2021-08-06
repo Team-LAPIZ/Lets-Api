@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
-        importMeta("pages/mail/verify.php", "Verify Email - Let's API",
+        importMeta('services/mail/' . basename($_SERVER['PHP_SELF']), "Verify Email - Let's API",
         "Email, API, LetsAPI, Tools", "Check an email address by Let's API, A website that utilize many API(s).");
     ?>
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -215,7 +215,7 @@
 
     <?php 
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
-        footerImport("pages/mail/verify.php", "This service is made by using API call from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
+        footerImport('services/mail/' . basename($_SERVER['PHP_SELF']), "This service is made by using API call from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
     ?>
 
 </body>

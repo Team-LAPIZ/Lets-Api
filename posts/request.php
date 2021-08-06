@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/about.php", "Feature Request - Let's API",
+        importMeta('posts/' . basename($_SERVER['PHP_SELF']), "Feature Request - Let's API",
         "Request, LetsAPI, Tools", "Feature request section of Let's API.");
     ?>
 </head>
@@ -40,7 +40,7 @@
     
     <?php
         include_once "../handler/include/footer.php";
-        footerImport("webinfo/about.php");
+        footerImport('posts/' . basename($_SERVER['PHP_SELF']));
     ?>
 </body>
 

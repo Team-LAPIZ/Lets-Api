@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <?php 
 
 $anime = "";
@@ -14,7 +17,8 @@ if(!empty($_GET["id"])){
 }
 
 if($anime == "" and $id == ""){
-    echo "Error: Invalid Argument. No anime or id";
+    header("Location: /handler/errors/404");
+    exit();
 }
 
 ?>

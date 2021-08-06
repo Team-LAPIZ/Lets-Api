@@ -8,7 +8,7 @@ We have added a bbcode text editor by using script from sceditor.com, more featu
     <?php
         $current_file_name = str_replace("_", " ", substr(basename($_SERVER['PHP_SELF']), 0, -4));
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/about.php", $current_file_name, "Posts, LetsAPI, News", trim($desc));
+        importMeta('posts/' . basename($_SERVER['PHP_SELF']), $current_file_name, "Posts, LetsAPI, News", trim($desc));
     ?>
 
 </head>
@@ -43,7 +43,7 @@ We have added a bbcode text editor by using script from sceditor.com, more featu
 
     <?php
         include_once "../handler/include/footer.php";
-        footerImport("webinfo/about.php");
+        footerImport('posts/' . basename($_SERVER['PHP_SELF']));
     ?>
 
 </body>

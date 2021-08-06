@@ -7,6 +7,7 @@ function footerImport($dirToPage, $apiFrom = "") {
     $dirPrivacyPolicy = "/webinfo/privacypolicy.php";
 
     echo "
+    <script src=\"/handler/script/enableTooltips.js\"></script>
     <div class = \"gap\"></div>
     ";
 

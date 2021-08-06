@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once "../include/meta.php";
-        importMeta("handler/errors/403.php", "../css/style.css", "401 - Unauthorized Let's API",
+        importMeta("handler/errors/403.php", "401 - Unauthorized Let's API",
         "API, Forbidden, 404", "404 - Page Not Found. Let's API is A website that utilize many API(s) such as email verification, movies searching, anime, etc.");
     ?>
 </head>
@@ -13,7 +13,6 @@
 
     <?php
         include_once "../include/header.php";
-        headerImport(2, "../../pages/auth/login.php");
     ?>
 
     <h1 class="gap-top"></h1>
@@ -25,7 +24,7 @@
 
     <?php 
         include_once "../include/footer.php";
-        footerImport(1, "handler/errors/404.php");
+        footerImport("handler/errors/404.php");
     ?>
 
 </body>

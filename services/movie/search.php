@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
-        importMeta("pages/movie/search.php","Browse Movie - Let's API",
+        importMeta('services/movie/' . basename($_SERVER['PHP_SELF']), "Browse Movie - Let's API",
         "Movie, API, LetsAPI, Tools", "Movie Searching by Let's API, A website that utilize many API(s)");
     ?>
 </head>
@@ -98,7 +98,7 @@
 
     <?php 
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
-        footerImport("pages/movie/search.php");
+        footerImport('services/movie/' . basename($_SERVER['PHP_SELF']));
     ?>
 
 </body>

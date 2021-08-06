@@ -1,9 +1,12 @@
 <?php 
+require_once  __DIR__ . "/./getTime.php";
+list($year, $season) = getNextYearAndSeason();
+
 // Initialize cURL.
 $ch = curl_init();
 
 // Setting
-curl_setopt($ch, CURLOPT_URL, "https://api.jikan.moe/v4/top/anime");
+curl_setopt($ch, CURLOPT_URL, "https://api.jikan.moe/v4/seasons/{$year}/{$season}");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
@@ -45,4 +48,3 @@ for ($i = 0; $i < count($dataJson->data); $i++) {
             </a>
     ";
 }
-?>
