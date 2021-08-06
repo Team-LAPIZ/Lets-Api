@@ -3,8 +3,8 @@
 
 <head>
     <?php 
-        include_once "../handler/include/meta.php";
-        importMeta("webinfo/privacypolicy.php", "../handler/css/style.css", "Privacy Policy - Let's API",
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
+        importMeta("webinfo/privacypolicy.php", "Privacy Policy - Let's API",
         "Privacy Policy, LetsAPI, Tools", "Privacy Policy section of Let's API.");
     ?>
 </head>
@@ -12,8 +12,7 @@
 <body class="background bulat1 bulat2">
 
     <?php 
-        include_once "../handler/include/header.php";
-        headerImport(1, "../pages/auth/login.php");
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/header.php";
     ?>
     
     <h1 class="gap-top"></h1>
@@ -29,8 +28,8 @@
     </div>
 
     <?php 
-        include_once "../handler/include/footer.php";
-        footerImport(1, "webinfo/privacypolicy.php");
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
+        footerImport("webinfo/privacypolicy.php");
     ?>
 
 </body>

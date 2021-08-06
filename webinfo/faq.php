@@ -3,8 +3,8 @@
 
 <head>
     <?php 
-        include_once "../handler/include/meta.php";
-        importMeta("webinfo/faq.php", "../handler/css/style.css", "FAQ - Let's API",
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
+        importMeta("webinfo/faq.php", "FAQ - Let's API",
         "FAQ, LetsAPI, Tools", "FAQ section of Let's API.");
     ?>
 </head>
@@ -12,8 +12,7 @@
 <body class="background bulat1 bulat2">
 
     <?php 
-        include_once "../handler/include/header.php";
-        headerImport(1, "../pages/auth/login.php");
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/header.php";
     ?>
     
     <h1 class="gap-top"></h1>
@@ -40,8 +39,8 @@
     </div>
 
     <?php 
-        include_once "../handler/include/footer.php";
-        footerImport(1, "webinfo/faq.php");
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
+        footerImport("webinfo/faq.php");
     ?>
 
 </body>

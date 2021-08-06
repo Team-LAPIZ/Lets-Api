@@ -301,6 +301,8 @@ p {
     /* margin-bottom: 10px; */
     padding-bottom: 5px;
     margin-top: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .api-call>a:hover {
@@ -489,7 +491,7 @@ p {
 }
 
 
-.container {
+.container-main {
     display: flex;
     justify-content: center;
     margin-top: 70px;
@@ -517,11 +519,95 @@ p {
     margin-right: auto;
 }
 
-.item-n-img-wrap {
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(/handler/img/loader-64x/Preloader_2.gif) center no-repeat #fff;
+}
+
+.anime-container {
     margin: 30px 20px 0px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+}
+
+.gallery-title {
+    border-bottom: 1px solid #189AB4;
+    padding-bottom: 5px;
+    font-size: medium;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.gallery-gap-little {
+    padding-top: 5px;
+}
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+}
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: rgba(0, 0, 0, 0.452);
+}
+
+.flickity-prev-next-button.no-svg {
+    color: rgba(0, 0, 0, 0.452);
+}
+
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+    display: none;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+    bottom: 0px;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}
+
+.top-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(126, 200, 227, 0.7);
+    color: white;
+    font-size: smaller;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(126, 200, 227, 0.7);
+    color: white;
+    font-size: smaller;
 }
 
 .item-img {
@@ -945,6 +1031,7 @@ p {
     /* width */
     ::-webkit-scrollbar {
         width: 5px;
+        height: 5px;
     }
 
     /* button */
@@ -1028,7 +1115,7 @@ p {
         margin-top: 0px;
     }
 
-    .container {
+    .container-main {
         margin-top: 20px;
     }
 

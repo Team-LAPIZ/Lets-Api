@@ -3,8 +3,8 @@
 
 <head>
     <?php 
-        include_once "../../handler/include/meta.php";
-        importMeta("pages/mail/verify.php", "../../handler/css/style.css", "Verify Email - Let's API",
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
+        importMeta("pages/mail/verify.php", "Verify Email - Let's API",
         "Email, API, LetsAPI, Tools", "Check an email address by Let's API, A website that utilize many API(s).");
     ?>
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -13,8 +13,7 @@
 <body class="background bulat1 bulat2">
 
     <?php 
-        include_once "../../handler/include/header.php";
-        headerImport(2);
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/header.php";
     ?>
 
     <div class="content">
@@ -29,7 +28,7 @@
                 </div>
                 <div class="center-recaptcha">
                 <?php 
-                require_once '../../handler/require/loadenv.php';
+                require_once $_SERVER['DOCUMENT_ROOT'] . '/handler/require/loadenv.php';
                 echo"
                     <div class=\"g-recaptcha\" data-sitekey=\"{$_ENV["recaptchaSiteKey"]}\" data-callback=\"enableButton\" data-expired-callback=\"disableButton\"></div>
                 " 
@@ -132,7 +131,7 @@
     </script>
 
     <?php 
-    require_once "../../handler/require/verifyMail.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/handler/require/verifyMail.php";
     // Check When Button Is Pressed
     // Plus server side validation
     if (isset($_POST['clickbuttonver']) && !empty($_POST['emailToCheck']) &&
@@ -171,7 +170,7 @@
     }
 
     function CheckCaptcha($userResponse) {
-        require_once '../../handler/require/loadenv.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/handler/require/loadenv.php';
 
         $fields_string = '';
         $fields = array(
@@ -215,8 +214,8 @@
     ?>
 
     <?php 
-        include_once "../../handler/include/footer.php";
-        footerImport(2, "pages/mail/verify.php", "This service is made by using API call from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
+        footerImport("pages/mail/verify.php", "This service is made by using API call from <a class=\"footerlink\" href=\"https://www.abstractapi.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Abstractapi.com</a>");
     ?>
 
 </body>

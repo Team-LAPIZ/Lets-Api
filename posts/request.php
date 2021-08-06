@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once "../handler/include/meta.php";
-        importMeta("webinfo/about.php", "../handler/css/style.css", "Feature Request - Let's API",
+        importMeta("webinfo/about.php", "Feature Request - Let's API",
         "Request, LetsAPI, Tools", "Feature request section of Let's API.");
     ?>
 </head>
@@ -13,12 +13,11 @@
 
     <?php 
         include_once "../handler/include/header.php";
-        headerImport(1, "../pages/auth/login.php");
     ?>
     
     <h1 class="gap-top"></h1>
     <div class="content">
-    <a href="../post.php"><img class="back-arrow" src="../src/arrow.png" alt="back"> Go back to posts</a>
+    <a href="../post.php"><img class="back-arrow" src="/handler/img/arrow.png" alt="back"> Go back to posts</a>
         <h1 class="margin-top post-title">Feedback for the website</h1>
         <div class="post-info">
             Posted by Team-LAPIZ | <a href="#disqus_thread" class="disqus-comment-count" data-disqus-url="http//letsapi.me/posts/request" data-disqus-identifier="posts/request">0 comment</a>
@@ -41,7 +40,7 @@
     
     <?php
         include_once "../handler/include/footer.php";
-        footerImport(1, "webinfo/about.php");
+        footerImport("webinfo/about.php");
     ?>
 </body>
 

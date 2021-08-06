@@ -1,37 +1,17 @@
 <?php 
-    function headerImport($dirJump){ 
-        $dirHome = "";
-        $dirPost = "";
-        $dirAbout = "";
-        $dirTeam = "";
-        $dirLogo = "";
-        $dirLogoText = "";
-        $loadHeaderScript = "";
-
-        for ($i=0; $i < $dirJump; $i++) { 
-            $dirHome .= "../";
-            $dirPost .= "../";
-            $dirAbout .= "../";
-            $dirTeam .= "../";
-            $dirLogo .= "../";
-            $dirLogoText .= "../";
-            $loadHeaderScript .= "../";
-        }
-
-        $time = time();
-        $dirHome .= "./";
-        $dirPost .= "post.php";
-        $dirAbout .= "webinfo/about.php";
-        $dirTeam .= "webinfo/team.php";
-        $dirLogo .= "src/kite.png";
-        $dirLogoText .= "src/logotext.png";
-        $loadHeaderScript .= "handler/script/headerButton.js?v={$time}";
-
-        if($dirJump == 0) { 
-            $dirPost = "./post.php";
-        }
-
-        echo "
+    $time = time();
+    $dirHome = "/";
+    $dirPost = "/post.php";
+    $dirAbout = "/webinfo/about.php";
+    $dirTeam = "/webinfo/team.php";
+    $dirLogo = "/handler/img/kite.png";
+    $dirLogoText = "/handler/img/logotext.png";
+    $loadHeaderScript = "/handler/script/headerButton.js?v={$time}";
+    echo "
+        <div class=\"se-pre-con\"></div>
+        <script src=\"/handler/script/flickity.pkgd.js\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js\" integrity=\"sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js\" integrity=\"sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/\" crossorigin=\"anonymous\"></script>
         <header class =\"header slideFromTop\">
             
             <img class=\"logo-header\" src=\"{$dirLogo}\" alt=\"Let's API Logo\">
@@ -118,8 +98,8 @@
         <script src=\"{$loadHeaderScript}\"></script>
         ";
 
-        // Load darkmode script
-        echo "
+    // Load darkmode script
+    echo "
         <script src=\"https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js\"></script>
         <script>
             function addDarkmodeWidget() {
@@ -134,7 +114,7 @@
                     buttonColorLight: '#100f2c', // default: '#fff'
                     saveInCookies: true, // default: true,
                     label: '🌙', // default: ''
-                    autoMatchOsTheme: true // default: true
+                    autoMatchOsTheme: false // default: true
                 }
                 
                 const darkmode = new Darkmode(options);
@@ -142,6 +122,5 @@
             }
             window.addEventListener('load', addDarkmodeWidget);
         </script>
-        ";
-    }
+    ";
 ?>

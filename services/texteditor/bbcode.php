@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once "../../handler/include/meta.php";
-        importMeta("services/anime/search.php", "../../handler/css/style.css", "BBCode Editor/Formatter - Let's API",
+        importMeta("services/anime/search.php", "BBCode Editor/Formatter - Let's API",
         "Bbcode, text-editor, LetsAPI, Tools", "BBCode Formatter, A bbcode editor using the script from sceditor by Let's API, A website that utilize many API(s) and tools.");
     ?>
     <link rel="stylesheet" href="./formatter/themes/default.min.css" id="theme-style" />
@@ -17,8 +17,7 @@
 <body class="background bulat1 bulat2">
 
     <?php 
-        include_once "../../handler/include/header.php";
-        headerImport(2);
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/header.php";
     ?>
 
     <div class="content">
@@ -41,8 +40,8 @@
     </div>
     
     <?php 
-        include_once "../../handler/include/footer.php";
-        footerImport(2, "pages/mail/verify.php", "This service is made by using bbcode formatter by <a class=\"footerlink\" href=\"https://sceditor.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Sceditor</a>");
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
+        footerImport("pages/mail/verify.php", "This service is made by using bbcode formatter by <a class=\"footerlink\" href=\"https://sceditor.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Sceditor</a>");
     ?>
 
 </body>

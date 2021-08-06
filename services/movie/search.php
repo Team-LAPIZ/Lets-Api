@@ -3,8 +3,8 @@
 
 <head>
     <?php 
-        include_once "../../handler/include/meta.php";
-        importMeta("pages/movie/search.php", "../../handler/css/style.css", "Browse Movie - Let's API",
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
+        importMeta("pages/movie/search.php","Browse Movie - Let's API",
         "Movie, API, LetsAPI, Tools", "Movie Searching by Let's API, A website that utilize many API(s)");
     ?>
 </head>
@@ -12,8 +12,7 @@
 <body class="background bulat1 bulat2">
 
     <?php 
-        include_once "../../handler/include/header.php";
-        headerImport(2);
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/header.php";
     ?>
     <div class="content">
         <div class="service-container">
@@ -28,7 +27,7 @@
 
         <div class="movie-section">
             <div class="movie-wrapper">
-                <img class="poster" src="../../src/cap.jpg" alt="poster movie">
+                <img class="poster" src="handler/img/cap.jpg" alt="poster movie">
                 <div class="movie-text-wrapper">
                     <h4 class="judul">
                         Captain America: The First Avenger (2011)
@@ -45,7 +44,7 @@
             </div>
 
             <div class="movie-wrapper">
-                <img class="poster" src="../../src/cap.jpg" alt="poster movie">
+                <img class="poster" src="handler/img/cap.jpg" alt="poster movie">
                 <div class="movie-text-wrapper">
                     <h4 class="judul">
                         Captain America: The First Avenger (2011)
@@ -62,7 +61,7 @@
             </div>
 
             <div class="movie-wrapper">
-                <img class="poster" src="../../src/cap.jpg" alt="poster movie">
+                <img class="poster" src="handler/img/cap.jpg" alt="poster movie">
                 <div class="movie-text-wrapper">
                     <h4 class="judul">
                         Captain America: The First Avenger (2011)
@@ -79,7 +78,7 @@
             </div>
 
             <div class="movie-wrapper">
-                <img class="poster" src="../../src/cap.jpg" alt="poster movie">
+                <img class="poster" src="handler/img/cap.jpg" alt="poster movie">
                 <div class="movie-text-wrapper">
                     <h4 class="judul">
                         Captain America: The First Avenger (2011)
@@ -98,8 +97,8 @@
     </div>
 
     <?php 
-        include_once "../../handler/include/footer.php";
-        footerImport(2, "pages/movie/search.php");
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
+        footerImport("pages/movie/search.php");
     ?>
 
 </body>

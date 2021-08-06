@@ -1,19 +1,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
 <?php 
-function footerImport($dirJump, $dirToPage, $apiFrom = "") {
-    $dirService = "";
-    $dirPrivacyPolicy = "";
-    $dirFaq = "";
-    for ($i=0; $i < $dirJump; $i++) { 
-        $dirService .= "../";
-        $dirPrivacyPolicy .= "../";
-        $dirFaq .= "../";
-    }
-
-    $dirService .= "webinfo/service.php";
-    $dirFaq .= "webinfo/faq.php";
-    $dirPrivacyPolicy .= "webinfo/privacypolicy.php";
+function footerImport($dirToPage, $apiFrom = "") {
+    $dirService = "/webinfo/service.php";
+    $dirFaq = "/webinfo/faq.php";
+    $dirPrivacyPolicy = "/webinfo/privacypolicy.php";
 
     echo "
     <div class = \"gap\"></div>
@@ -30,7 +21,7 @@ function footerImport($dirJump, $dirToPage, $apiFrom = "") {
         ";
     }
 
-        echo "
+    echo "
         <div class=\"social\">
             <a href=\"https://github.com/Team-LAPIZ\" target=\"_blank\" rel=\"noreferrer noopener\">
                 <i class=\"icon ion-social-github\"></i>
