@@ -39,16 +39,16 @@ RewriteRule .* - [L,R=404]
 
 # Error Handling
 # Bad Request
-ErrorDocument 400 http://letsapi.me/handler/errors/400
+ErrorDocument 400 https://letsapi.me/handler/errors/400
 
 # Unauthorized
-ErrorDocument 401 http://letsapi.me/handler/errors/401
+ErrorDocument 401 https://letsapi.me/handler/errors/401
 
 # Forbidden
-ErrorDocument 403 http://letsapi.me/handler/errors/403
+ErrorDocument 403 https://letsapi.me/handler/errors/403
 
 # Page Not Found
-ErrorDocument 404 http://letsapi.me/handler/errors/404
+ErrorDocument 404 https://letsapi.me/handler/errors/404
 
 # Internal Server Error
 ErrorDocument 500 https://infinityfree.net/errors/500/

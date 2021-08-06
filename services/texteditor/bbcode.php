@@ -9,9 +9,9 @@
     ?>
     <link rel="stylesheet" href="./formatter/themes/default.min.css" id="theme-style" />
     
-    <script src="./formatter/sceditor.min.js"></script>
-    <script src="./formatter/icons/monocons.js"></script>
-    <script src="./formatter/formats/bbcode.js"></script>
+    <script src="/services/texteditor/formatter/sceditor.min.js"></script>
+    <script src="/services/texteditor/formatter/icons/monocons.js"></script>
+    <script src="/services/texteditor/formatter/formats/bbcode.js"></script>
 </head>
 
 <body class="background bulat1 bulat2">
