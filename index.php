@@ -4,8 +4,7 @@
 <head>
     <?php 
         include_once "handler/include/meta.php";
-        importMeta("", "Let's API", "API, Tools", "Home of Let's API. A website that utilize many API(s) 
-        such as email verification, movies searching, anime, etc.");
+        importMeta("", "Let's API", "API, Tools", "Home of Let's API. A website that utilize many API(s) such as email verification, movies searching, anime, etc.");
     ?>
 </head>
 

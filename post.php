@@ -4,8 +4,7 @@
 <head>
     <?php 
         include_once "handler/include/meta.php";
-        importMeta("post.php", "Post - Let's API", "Team, LetsAPI, Tools", "Post section of Let's API. 
-        Contains website news/articles and place to post feedback and request.");
+        importMeta("post.php", "Post - Let's API", "Team, LetsAPI, Tools", "Post section of Let's API. Contains website news/articles and place to post feedback and request.");
     ?>
 </head>
 
