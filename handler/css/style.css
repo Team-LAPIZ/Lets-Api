@@ -563,6 +563,48 @@ p {
     background-color: #3e8e41;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+.searchbar {
+    padding: 10px;
+    width: 250px;
+    border: solid #c8ccd0 1px;
+    border-radius: 5px 0px 0px 5px;
+    -webkit-transition: box-shadow linear 0.2s;
+    transition: box-shadow linear 0.2s, width 500ms ease;
+}
+
+.searchbar:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+    width: 280px;
+}
+
+.searchbar:hover {
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+    width: 280px;
+}
+
+.search_button {
+    height: 38px;
+    margin-left: -4px;
+    width: 70px;
+    border: solid #c8ccd0 1px;
+    border-radius: 0px 5px 5px 0px;
+    border-left: 0;
+    transition: 400ms ease-out;
+}
+
+.search_button:hover {
+    background-color: hsl(0, 0%, 85%);
+}
+
+.searchbar-wrapper {
+    max-width: 450px;
+    margin: 10px 10px 0px;
+}
+
 .anime-menu {
     display: flex;
     flex-direction: row;
@@ -641,7 +683,7 @@ p {
 .weekly {
     display: flex;
     flex-direction: row;
-    
+
 }
 
 .gallery-title {
@@ -1225,6 +1267,11 @@ p {
         font-size: 18pt;
     }
 
+    .wrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
     .margin-top {
         margin-top: 20px;
     }
@@ -1318,6 +1365,12 @@ p {
 
     .button {
         margin-right: 60px;
+    }
+}
+
+@media (max-width: 375px) { 
+    .searchbar {
+        max-width: 160px;
     }
 }
 
