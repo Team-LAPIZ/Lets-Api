@@ -54,7 +54,7 @@
 
         <header class = \"header-mobile slideFromTop\" id=\"header-mobile\"> 
             <img class=\"logo-header-mobile\" src=\"{$dirLogo}\" alt=\"Let's API Logo\"> 
-            <img class=\"logo-text-mobile push-Mleft\" src=\"{$dirLogoText}\" alt=\"Let's API Text Logo\"> 
+            <img style=\"cursor: pointer;\" onclick=\"goHome()\" class=\"logo-text-mobile push-Mleft\" src=\"{$dirLogoText}\" alt=\"Let's API Text Logo\"> 
 
             <a class=\"toggle-button\" id=\"togglebtn\">
                 <span class=\"bar\"></span>

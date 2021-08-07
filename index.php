@@ -26,7 +26,7 @@
                 </figure>
             </a>
             <div class="dropdown">
-                <a onclick="openlinkAnime()" href="javascript:void(0)">
+                <a onclick="return openlinkAnime()" href="services/anime/">
                     <figure class="menu-item">
                         <div class="rectangle">
                             <img src="handler/img/mal.png" alt="MAL" />
@@ -62,8 +62,10 @@
 
     <script>
         function openlinkAnime(){
-            if(getScreenWidth() > 700) { // Get Screen Width already imported in header
-                window.open("services/anime/", "_self");
+            if(getScreenWidth() < 700) {
+                return false;
+            } else {
+                return true;
             }
         }
     </script>

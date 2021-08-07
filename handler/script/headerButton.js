@@ -90,6 +90,10 @@ function getScreenWidth() {
     return w.innerWidth || e.clientWidth || g.clientWidth
 }
 
+function goHome() {
+    window.open("/" , "_self");
+}
+
 window.onresize = function() {
     if (getScreenWidth() > 700) { // If 
         dropdownMobile.style.display = 'none';
