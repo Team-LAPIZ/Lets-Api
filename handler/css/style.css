@@ -345,6 +345,11 @@ p {
     border-bottom: 1px solid blue;
 }
 
+.link-back:hover {
+    opacity: 0.8;
+    border-bottom: 1px solid rgba(145, 155, 160, 0.699);
+}
+
 .footerlink:hover {
     border-bottom: 2px solid #aaa;
 }
@@ -1157,6 +1162,11 @@ p {
 .fadeOut {
     -webkit-animation: fadeOut 1s;
     animation: fadeOut 1s;
+}
+
+.fadeOut-fast {
+    -webkit-animation: fadeOut 0.5s;
+    animation: fadeOut 0.5s;
 }
 
 .slideFromBottom {

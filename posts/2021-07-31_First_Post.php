@@ -21,7 +21,7 @@ Welcome to Letsapi! Our first posts.
     
     <h1 class="gap-top"></h1>
     <div class="content">
-    <a href="../post.php"><img class="back-arrow" src="/handler/img/arrow.png" alt="back"> Go back to posts</a>
+    <a href="../post.php"><img class="back-arrow" src="/handler/img/arrow.png" alt="back"> <span class="link-back">Go back to posts</span></a>
         <h1 class="margin-top post-title">First Post</h1>
         <div class="post-info">
             Posted by Dadangdut33 at 2021-7-31 | <a href="#disqus_thread" class="disqus-comment-count" data-disqus-url="http//letsapi.me/posts/<?php echo substr(basename($_SERVER['PHP_SELF']), 0, -4)?>" data-disqus-identifier="posts/<?php echo substr(basename($_SERVER['PHP_SELF']), 0, -4)?>">0 Comment</a>
