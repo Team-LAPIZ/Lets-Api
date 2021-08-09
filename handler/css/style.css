@@ -701,6 +701,47 @@ p {
     align-content: flex-start;
 }
 
+.details-container-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.details-container-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.info-under-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    margin: 20px 20px 0;
+}
+
+.details-content {
+    margin: 10px;
+}
+
+.synopsis {
+    max-width: 500px;
+}
+
+.information {
+    max-width: 350px;
+}
+
+.info-num {
+    max-width: 400px;
+}
+
 .schedule > a {
     max-height: 295px;
     margin: 0;
@@ -714,6 +755,13 @@ p {
     padding: 15px 0px;
 }
 
+.anime-centered {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
 .schedule-title {
     border-bottom: 1px solid #189AB4;
     padding-bottom: 5px;
@@ -724,11 +772,14 @@ p {
 }
 
 .gallery-title {
-    border-bottom: 1px solid #189AB4;
     padding-bottom: 5px;
     font-size: medium;
     text-align: center;
     margin: 0 auto 10px;
+}
+
+.gallery-border-bot {
+    border-bottom: 1px solid #189AB4;
 }
 
 .gallery-gap-little {
@@ -1283,6 +1334,12 @@ p {
     }
 }
 
+@media (max-width: 905px) {
+    #links-anime {
+        padding-left: 20px;
+    }
+}
+
 /* desktop header stretch  */
 @media (max-width: 860px) {
     .header {
@@ -1413,6 +1470,12 @@ p {
 @media (max-width: 375px) { 
     .searchbar {
         max-width: 160px;
+    }
+    .p-under-info {
+        margin: 0;
+    }
+    #info-under {
+        margin-bottom: 20px;
     }
 }
 

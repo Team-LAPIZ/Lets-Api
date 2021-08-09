@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
-        importMeta('services/anime/', "Anime - Let's API", "Anime, Scraper, API, LetsAPI, Tools", 
+        importMeta('services/anime/'  . basename($_SERVER['PHP_SELF']), "Anime - Let's API", "Anime, Scraper, API, LetsAPI, Tools", 
         "Look up an anime details, recommendation, or schedule by using Jikan Rest API by Let's API, A website that utilize many API(s) and tools.");
     ?>
 </head>
@@ -55,7 +55,7 @@
             <?php require "./get/getTime.php";
                 list($year, $season) = getYearAndSeason();
                 echo "
-            <h4 class=\"gallery-title gallery-gap-little\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Current Year/Season: {$year}/{$season}\">Anime Airing This Season</h4>
+            <h4 class=\"gallery-title gallery-gap-little gallery-border-bot\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Current Year/Season: {$year}/{$season}\">Anime Airing This Season</h4>
                     ";
             ?>
             <div class="js-flickity" data-flickity-options='{ "cellAlign": "center", "autoPlay": 4000,  "pauseAutoPlayOnHover": true, "groupCells": true, "wrapAround": true, "pageDots": false, 
@@ -69,7 +69,7 @@
             <?php
                 list($year, $season) = getNextYearAndSeason();
                 echo "
-            <h4 class=\"gallery-title gallery-gap-little\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Upcoming Season: {$season} of {$year}\">Upcoming Season</h4>
+            <h4 class=\"gallery-title gallery-gap-little gallery-border-bot\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Upcoming Season: {$season} of {$year}\">Upcoming Season</h4>
                     ";
             ?>
             <div class="js-flickity" data-flickity-options='{ "cellAlign": "center", "autoPlay": 4000, "pauseAutoPlayOnHover": true, "groupCells": true, "wrapAround": true, "pageDots": false, 
@@ -80,7 +80,7 @@
             </div>
 
             <!-- TOP -->
-            <h4 class="gallery-title gallery-gap-little" data-bs-toggle="tooltip" data-bs-placement="top" title="Top 25 Anime">Top Anime Series of All Time</h4>
+            <h4 class="gallery-title gallery-gap-little gallery-border-bot" data-bs-toggle="tooltip" data-bs-placement="top" title="Top 25 Anime">Top Anime Series of All Time</h4>
             <div class="js-flickity" data-flickity-options='{ "cellAlign": "center", "autoPlay": 4000, "pauseAutoPlayOnHover": true, "groupCells": true, "wrapAround": true, "pageDots": false, 
                 "prevNextButtons": true, "freeScroll": true, "selectedAttraction": 0.01, "friction": 0.20}'>
                     <?php

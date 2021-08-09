@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/meta.php";
-        importMeta('services/anime/', "Search for Anime / Recommendation - Let's API", "Anime, Scraper, API, LetsAPI, Tools", 
+        importMeta('services/anime/'  . basename($_SERVER['PHP_SELF']), "Search for Anime / Recommendation - Let's API", "Anime, Scraper, API, LetsAPI, Tools", 
         "Search an anime or recommendation by using Jikan Rest API by Let's API, A website that utilize many API(s) and tools.");
     ?>
 </head>
@@ -51,7 +51,7 @@
         <script src="./btnScript.js?v=<?time()?>"></script>
         
         <div class="anime-container">
-        <?php 
+        <?php require './get/getSearchAnime.php';
         if(isset($_GET['mode'])) {
             $mode = $_GET['mode'];
             $query = "";
@@ -61,11 +61,15 @@
             switch ($mode) {
                 case 'search':
                     echo '<script>clickBtn1();'. 'document.getElementById("input1").value ="' . $query .'";</script>';
-                    // function search ...
+                    if($query !== "") {
+                        searchNormal($query);
+                    }
                     break;
                 case 'recommend':
                     echo '<script>clickBtn2();'. 'document.getElementById("input2").value ="' . $query .'";</script>';
-                    // function search ...
+                    if($query !== "") {
+                        searchRecommend($query);
+                    }
                     break;
                 default:
                     echo '<script>location.href =" '. './search.php' .'";</script>';
@@ -78,7 +82,7 @@
     <?php 
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/footer.php";
         footerImport('services/anime/' . basename($_SERVER['PHP_SELF']),  "This service is made possible by using <a class=\"footerlink\" href=\"https://jikan.moe/\" target=\"_blank\" rel=\"noreferrer noopener\">Jikan API</a>, 
-        a <a class=\"footerlink\" href=\"https://myanimelist.net/\" target=\"_blank\" rel=\"noreferrer noopener\">MAL</a> scraper Rest API. Images gallery are made using <a class=\"footerlink\" href=\"https://flickity.metafizzy.co/\" target=\"_blank\" rel=\"noreferrer noopener\">Flickity</a>");
+        a <a class=\"footerlink\" href=\"https://myanimelist.net/\" target=\"_blank\" rel=\"noreferrer noopener\">MAL</a> scraper Rest API.");
     ?>
 </body>
 
