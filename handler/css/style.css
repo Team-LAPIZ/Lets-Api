@@ -688,7 +688,39 @@ p {
 .weekly {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 10px;
+}
 
+.schedule {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.schedule > a {
+    max-height: 295px;
+    margin: 0;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-width: 400px;
+    padding: 15px 0px;
+}
+
+.schedule-title {
+    border-bottom: 1px solid #189AB4;
+    padding-bottom: 5px;
+    font-size: medium;
+    text-align: center;
+    margin: 0 auto 10px;
+    max-height: 28px;
 }
 
 .gallery-title {
