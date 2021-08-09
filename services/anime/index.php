@@ -75,7 +75,6 @@
             <div class="js-flickity" data-flickity-options='{ "cellAlign": "center", "autoPlay": 4000, "pauseAutoPlayOnHover": true, "groupCells": true, "wrapAround": true, "pageDots": false, 
                 "prevNextButtons": true, "freeScroll": true, "selectedAttraction": 0.01, "friction": 0.20}'>
                     <?php
-                        sleep(2);
                         include_once "./get/upcoming.php";
                     ?>
             </div>
@@ -85,7 +84,6 @@
             <div class="js-flickity" data-flickity-options='{ "cellAlign": "center", "autoPlay": 4000, "pauseAutoPlayOnHover": true, "groupCells": true, "wrapAround": true, "pageDots": false, 
                 "prevNextButtons": true, "freeScroll": true, "selectedAttraction": 0.01, "friction": 0.20}'>
                     <?php
-                        sleep(2);
                         include_once "./get/top.php";
                     ?>
             </div>

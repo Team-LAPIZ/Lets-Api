@@ -15,6 +15,7 @@
     ?>
 
     <div class="content">
+    <a href="./"><br><img class="back-arrow" src="/handler/img/arrow.png" alt="back"> <span class="link-back">Go to Anime Menu</span></a>
         <div class="service-container">
             <h1>Weekly Schedule</h1>
         </div>
