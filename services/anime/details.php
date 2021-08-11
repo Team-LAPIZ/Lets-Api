@@ -132,7 +132,7 @@
                             if($status == "Success") {
                                 for($i = 0; $i < count($relation); $i++){
                                     echo "
-                                    <li>
+                                    <li class='anime-li'>
                                         <b>{$relation[$i]}</b> : {$id_n_name[$i]}
                                     </li>
                                     ";
