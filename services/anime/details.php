@@ -120,7 +120,7 @@
                 <div class="details-content">
                     <h4 class="gallery-title"><span class="gallery-border-bot">Synopsis</span></h4>
                     <div class="synopsis">
-                        <p class="p-justify" style="padding-top: 10px;"><?php echo $synopsis ?></p>
+                        <p class="p-justify"><?php echo $synopsis ?></p>
                     </div>
                 </div>
                 <div class="details-content">
