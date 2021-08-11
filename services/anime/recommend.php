@@ -39,7 +39,7 @@
         
         <div class="anime-container">
         <?php require './get/getDetails.php';
-            getRecommend($id, $title);
+            getRecommend($id);
         ?>
         </div>
     </div>

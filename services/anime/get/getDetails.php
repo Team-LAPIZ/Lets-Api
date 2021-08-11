@@ -23,6 +23,11 @@ function getDetails($id){
     }
 
     $malURL = $dataJson->data->url;
+    $trailer = "N/A";
+    if($dataJson->data->trailer) {
+        $trailer = $dataJson->data->trailer->url ? $dataJson->data->trailer->url : "N/A";
+    }
+
     $image = $dataJson->data->images->jpg->large_image_url ? $dataJson->data->images->jpg->large_image_url : "N/A";
     $score = $dataJson->data->score ? $dataJson->data->score : "N/A";
     $scored_by = $dataJson->data->scored_by ? $dataJson->data->scored_by : "N/A";
@@ -78,12 +83,164 @@ function getDetails($id){
         $producers[] = "N/A";   
     }
 
-
-    return array($malURL, $image, $score, $scored_by, $rank, $popularity, $members, $favorites, $synopsis, $air_date, $duration,
+    return array($malURL, $image, $trailer, $score, $scored_by, $rank, $popularity, $members, $favorites, $synopsis, $air_date, $duration,
     $ageRating, $episodes, $title, $titleEng, $titleJp, $type, $source, $status, $synonyms, $genres, $studios, $licensors, $producers);
 }
 
-function getRecommend($id, $name){ 
+function getChars($id){
+    // Initialize cURL.
+    $ch = curl_init();
+
+    // Setting
+    curl_setopt($ch, CURLOPT_URL, "https://api.jikan.moe/v4/anime/$id/characters");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    // Execute the request.
+    $data = curl_exec($ch);
+
+    // Parse data to json object
+    $dataJson = json_decode($data);
+
+    // Close the cURL handle.
+    curl_close($ch);
+
+    if($dataJson == null) { 
+        echo "Error Receiving The Data";
+        return;
+    }
+
+    $status = "";
+    $characters_name = [];
+    $characters_img = [];
+    $characters_role = [];
+    $characters_va_jp = [];
+    $characters_va_img = [];
+
+    if(count($dataJson->data) == 0) { 
+        $status = "No Characters";
+    } else {
+        for ($i=0; $i < count($dataJson->data); $i++) {
+            $characters_name[] = $dataJson->data[$i]->character->name;
+            $characters_img[] = $dataJson->data[$i]->character->images->jpg->image_url;
+            $characters_role[] = $dataJson->data[$i]->role;
+
+            $vaCount = count($dataJson->data[$i]->voice_actors);
+            $found = false;
+            for ($j=0; $j < $vaCount; $j++) {
+                if($dataJson->data[$i]->voice_actors[$j]->language == "Japanese") {
+                    $characters_va_jp[] = $dataJson->data[$i]->voice_actors[$j]->person->name;
+                    $characters_va_img[] = $dataJson->data[$i]->voice_actors[$j]->person->images->jpg->image_url;
+                    $found = true;
+                }
+            }
+
+            if($vaCount == 0 || $found == false) { 
+                $characters_va_jp[] = "N/A";
+                $characters_va_img[] = "N/A";
+            }
+        }
+
+        $status = "Success";
+    }
+
+    return array($status, $characters_name, $characters_img, $characters_role, $characters_va_jp, $characters_va_img);
+}
+
+function getStaff($id){
+    // Initialize cURL.
+    $ch = curl_init();
+
+    // Setting
+    curl_setopt($ch, CURLOPT_URL, "https://api.jikan.moe/v4/anime/$id/staff");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    // Execute the request.
+    $data = curl_exec($ch);
+
+    // Parse data to json object
+    $dataJson = json_decode($data);
+
+    // Close the cURL handle.
+    curl_close($ch);
+
+    if($dataJson == null) { 
+        echo "Error Receiving The Data";
+        return;
+    }
+
+    $status = "";
+    $name = [];
+    $name_img = [];
+    $position = [];
+
+    if(count($dataJson->data) == 0) { 
+        $status = "No Staff";
+    } else {
+        for ($i=0; $i < count($dataJson->data); $i++) {
+            $name[] = $dataJson->data[$i]->person->name;
+            $name_img[] = $dataJson->data[$i]->person->images->jpg->image_url;
+            $position[] = join(', ', $dataJson->data[$i]->positions);
+        }
+
+        $status = "Success";
+    }
+
+    return array($status, $name, $name_img, $position);
+}
+
+function getRelation($id) { 
+    // Initialize cURL.
+    $ch = curl_init();
+
+    // Setting
+    curl_setopt($ch, CURLOPT_URL, "https://api.jikan.moe/v4/anime/$id/relations");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    // Execute the request.
+    $data = curl_exec($ch);
+
+    // Parse data to json object
+    $dataJson = json_decode($data);
+
+    // Close the cURL handle.
+    curl_close($ch);
+
+    if($dataJson == null) { 
+        echo "Error Receiving The Data";
+        return;
+    }
+
+    $status = "";
+    $relation = [];
+    $id_n_name = [];
+
+    if(count($dataJson->data) == 0) { 
+        $status = "No Related anime or manga";
+    } else {
+        for ($i=0; $i < count($dataJson->data); $i++) {
+            $relation[] = $dataJson->data[$i]->relation;
+
+            $input = [];
+            for($j = 0; $j < count($dataJson->data[$i]->entry); $j++) {
+                if($dataJson->data[$i]->entry[$j]->type == "manga") {
+                    $input[] = "<span data-bs-toggle=\"tooltip\" data-bs-placement=\"auto\" title=\"Type: {$dataJson->data[$i]->entry[$j]->type}\">{$dataJson->data[$i]->entry[$j]->name}</span>";
+                } else {
+                    $input[] = "<a class=\"link-subtle\" href=\"./details?id={$dataJson->data[$i]->entry[$j]->mal_id}\"><span data-bs-toggle=\"tooltip\" data-bs-placement=\"auto\" title=\"Type: {$dataJson->data[$i]->entry[$j]->type}\">{$dataJson->data[$i]->entry[$j]->name}</span></a>";
+                }
+            }
+            $id_n_name[] = join(", ", $input);
+        }
+
+        $status = "Success";
+    }
+
+    return array($status, $relation, $id_n_name);
+}
+
+function getRecommend($id){ 
     // Initialize cURL.
     $ch = curl_init();
 
@@ -139,8 +296,4 @@ function getRecommend($id, $name){
     }
     echo "</div>";
 }
-
-
-getDetails(9253);
-
 ?>

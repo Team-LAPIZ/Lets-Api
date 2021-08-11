@@ -685,6 +685,15 @@ p {
     margin: 30px 20px 0px;
 }
 
+.anime-li {
+    padding-left: 20px;
+    max-width: 360px;
+}
+
+.anime-img-tooltip {
+    max-height: 350px;
+}
+
 .weekly {
     display: flex;
     flex-direction: row;
@@ -736,6 +745,7 @@ p {
 
 .information {
     max-width: 350px;
+    width: 350px;
 }
 
 .info-num {
@@ -1331,12 +1341,6 @@ p {
 
     .header-mobile {
         display: none;
-    }
-}
-
-@media (max-width: 905px) {
-    #links-anime {
-        padding-left: 20px;
     }
 }
 
