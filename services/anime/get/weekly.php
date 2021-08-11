@@ -23,8 +23,8 @@ function getDay($day){
 function monday() {
     $data = getDay("monday");
 
-    if($data == null){
-        echo "Error Receiving The Data";
+    if($data == null || isset($data->monday) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
     } else {
         for ($i=0; $i < count($data->monday); $i++) { 
             $id = $data->monday[$i]->mal_id;
@@ -62,8 +62,8 @@ function monday() {
 function tuesday(){
     $data = getDay("tuesday");
 
-    if($data == null){
-        echo "Error Receiving The Data";
+    if($data == null || isset($data->tuesday) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
     } else {
         for ($i=0; $i < count($data->tuesday); $i++) { 
             $id = $data->tuesday[$i]->mal_id;
@@ -101,8 +101,8 @@ function tuesday(){
 function wednesday(){
     $data = getDay("wednesday");
 
-    if($data == null){
-        echo "Error Receiving The Data";
+    if($data == null || isset($data->wednesday) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
     } else {
         for ($i=0; $i < count($data->wednesday); $i++) { 
             $id = $data->wednesday[$i]->mal_id;
@@ -140,8 +140,8 @@ function wednesday(){
 function thursday(){
     $data = getDay("thursday");
 
-    if($data == null){
-        echo "Error Receiving The Data";
+    if($data == null || isset($data->thursday) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
     } else {
         for ($i=0; $i < count($data->thursday); $i++) { 
             $id = $data->thursday[$i]->mal_id;
@@ -179,8 +179,8 @@ function thursday(){
 function friday(){
     $data = getDay("friday");
 
-    if($data == null){
-        echo "Error Receiving The Data";
+    if($data == null || isset($data->friday) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
     } else {
         for ($i=0; $i < count($data->friday); $i++) { 
             $id = $data->friday[$i]->mal_id;
@@ -218,8 +218,8 @@ function friday(){
 function saturday(){
     $data = getDay("saturday");
 
-    if($data == null){
-        echo "Error Receiving The Data";
+    if($data == null || isset($data->saturday) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
     } else {
         for ($i=0; $i < count($data->saturday); $i++) { 
             $id = $data->saturday[$i]->mal_id;
@@ -257,8 +257,8 @@ function saturday(){
 function sunday(){
     $data = getDay("sunday");
 
-    if($data == null){
-        echo "Error Receiving The Data";
+    if($data == null || isset($data->sunday) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
     } else {
         for ($i=0; $i < count($data->sunday); $i++) { 
             $id = $data->sunday[$i]->mal_id;

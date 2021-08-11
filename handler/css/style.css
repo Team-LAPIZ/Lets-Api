@@ -685,9 +685,13 @@ p {
     margin: 30px 20px 0px;
 }
 
-.anime-li {
+.anime-ul {
     padding-left: 20px;
     max-width: 360px;
+}
+
+.anime-li {
+    padding-right: 10px;
 }
 
 .anime-img-tooltip {
@@ -747,6 +751,9 @@ p {
 .information {
     max-width: 350px;
     width: 350px;
+
+    max-height: 600px;
+    overflow: auto;
 }
 
 .info-num {
@@ -1369,6 +1376,14 @@ p {
         margin-top: 20px;
         text-align: center;
         font-size: 18pt;
+    }
+
+    .information {
+        width: auto;
+    }
+
+    .synopsis {
+        width: auto;
     }
 
     .wrapper {

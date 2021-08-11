@@ -37,20 +37,6 @@
         include_once $_SERVER['DOCUMENT_ROOT'] . "/handler/include/header.php";
     ?>
 
-    <?php 
-    function iterate($var) {
-        $x = 1;
-        $length = count($var);
-        foreach($var as $key) {
-            if($x == $length) {
-                echo $key;
-            } else {
-                echo $key . ', ';
-            }
-        }
-    }
-    ?>
-
     <div class="content">
     <a href="./"><br><img class="back-arrow" src="/handler/img/arrow.png" alt="back"> <span class="link-back">Go to Anime Menu</span></a>
         <div class="service-container">
@@ -134,13 +120,13 @@
                 <div class="details-content">
                     <h4 class="gallery-title"><span class="gallery-border-bot">Synopsis</span></h4>
                     <div class="synopsis">
-                        <p class="p-justify"><?php echo $synopsis ?></p>
+                        <p class="p-justify" style="padding-top: 10px;"><?php echo $synopsis ?></p>
                     </div>
                 </div>
                 <div class="details-content">
                     <h4 class="gallery-title"><span class="gallery-border-bot">Related anime or manga</span></h4>
                     <div class="information">
-                        <ul class="anime-li">
+                        <ul class="anime-ul">
                             <?php
                             list($status, $relation, $id_n_name) = getRelation($id);
                             if($status == "Success") {
@@ -163,13 +149,13 @@
                 <div class="details-content">
                     <h4 class="gallery-title"><span class="gallery-border-bot">Characters</span></h4>
                     <div class="information">
-                        <ul class="anime-li">
+                        <ul class="anime-ul">
                             <?php
                             list($status, $characters_name, $characters_img, $characters_role, $characters_va_jp, $characters_va_img) = getChars($id);
                             if($status == "Success") {
                                 for($i = 0; $i < count($characters_name); $i++){
                                     echo "
-                                    <li>
+                                    <li class='anime-li'>
                                         <span data-bs-toggle=\"tooltip\" data-bs-placement=\"auto\" data-bs-html=\"true\" title=\"<img class='anime-img-tooltip' src='{$characters_img[$i]}' onerror='this.onerror=null; this.src='/handler/img/noposter.png'' alt='{$characters_name[$i]}'/>\">
                                             <b>{$characters_name[$i]}</b>
                                         </span> ({$characters_role[$i]}) voiced by 
@@ -180,7 +166,7 @@
                                     ";
                                 }
                             } else {
-                                echo "<p style='text-align:justify; padding-right: 20px;'>No characters or voice actors have been added to this title.</p>";
+                                echo "<p style='text-align:justify; padding-right: 20px;'>{$status}</p>";
                             }
                             ?>
                         </ul>
@@ -189,20 +175,20 @@
                 <div class="details-content">
                     <h4 class="gallery-title"><span class="gallery-border-bot">Staff</span></h4>
                     <div class="information">
-                        <ul class="anime-li">
+                        <ul class="anime-ul">
                             <?php
                             list($status, $name, $name_img, $position) = getStaff($id);
                             if($status == "Success") {
                                 for($i = 0; $i < count($name); $i++){
                                     echo "
-                                    <li>
+                                    <li class='anime-li'>
                                         <span data-bs-toggle=\"tooltip\" data-bs-placement=\"auto\" data-bs-html=\"true\" title=\"<img class='anime-img-tooltip' src='{$name_img[$i]}' onerror='this.onerror=null; this.src='/handler/img/noposter.png'' alt='{$name[$i]}'/>\">
                                         <b>{$name[$i]}</b></span> - {$position[$i]}
                                     </li>
                                     ";
                                 }
                             } else {
-                                echo "<p style='text-align:justify; padding-right: 20px;'>No staff for this anime have been added to this title.</p>";
+                                echo "<p style='text-align:justify; padding-right: 20px;'>{$status}</p>";
                             }
                             ?>
                         </ul>
@@ -211,7 +197,7 @@
                 <div class="details-content">
                     <h4 class="gallery-title"><span class="gallery-border-bot">Links</span></h4>
                     <div class="information">
-                        <ul class="anime-li">
+                        <ul class="anime-ul">
                             <li><a class="link-subtle" href="./recommend?id=<?php echo $id?>&title=<?php echo $title?>">Look up Anime that are similar to this</a></li>
                             <li><a class="link-subtle" href="<?php echo $malURL?>">Official MyAnimeList page</a></li>
                             <li><a class="link-subtle" href="<?php echo $trailer?>" target="_blank" rel="noreferrer noopener">Official Trailer</a></li>

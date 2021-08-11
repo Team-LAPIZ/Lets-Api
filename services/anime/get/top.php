@@ -15,8 +15,8 @@ $dataJson = json_decode($data);
 
 // Close the cURL handle.
 curl_close($ch);
-if($dataJson == null) {
-    echo "Error Receiving The Data";
+if($dataJson == null || isset($dataJson->data) == false) { 
+    echo "Error Receiving The Data, you can try to reload the page.";
 } else {
     for ($i = 0; $i < count($dataJson->data); $i++) {
         $score = $dataJson->data[$i]->score ? $dataJson->data[$i]->score : "N/A";

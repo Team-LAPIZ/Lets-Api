@@ -17,8 +17,8 @@ function getDetails($id){
     // Close the cURL handle.
     curl_close($ch);
 
-    if($dataJson == null) { 
-        echo "Error Receiving The Data";
+    if($dataJson == null || isset($dataJson->data) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
         return;
     }
 
@@ -105,11 +105,6 @@ function getChars($id){
     // Close the cURL handle.
     curl_close($ch);
 
-    if($dataJson == null) { 
-        echo "Error Receiving The Data";
-        return;
-    }
-
     $status = "";
     $characters_name = [];
     $characters_img = [];
@@ -117,8 +112,14 @@ function getChars($id){
     $characters_va_jp = [];
     $characters_va_img = [];
 
+    
+    if($dataJson == null || isset($dataJson->data) == false) { 
+        $status = "Error Receiving The Data, you can try to reload the page.";
+        return array($status, $characters_name, $characters_img, $characters_role, $characters_va_jp, $characters_va_img);
+    }
+
     if(count($dataJson->data) == 0) { 
-        $status = "No Characters";
+        $status = "No characters or voice actors have been added to this title.";
     } else {
         for ($i=0; $i < count($dataJson->data); $i++) {
             $characters_name[] = $dataJson->data[$i]->character->name;
@@ -165,18 +166,18 @@ function getStaff($id){
     // Close the cURL handle.
     curl_close($ch);
 
-    if($dataJson == null) { 
-        echo "Error Receiving The Data";
-        return;
-    }
-
     $status = "";
     $name = [];
     $name_img = [];
     $position = [];
 
+    if($dataJson == null || isset($dataJson->data) == false) { 
+        $status = "Error Receiving The Data, you can try to reload the page.";
+        return array($status, $name, $name_img, $position);
+    }
+
     if(count($dataJson->data) == 0) { 
-        $status = "No Staff";
+        $status = "No staff for this anime have been added to this title.";
     } else {
         for ($i=0; $i < count($dataJson->data); $i++) {
             $name[] = $dataJson->data[$i]->person->name;
@@ -208,14 +209,14 @@ function getRelation($id) {
     // Close the cURL handle.
     curl_close($ch);
 
-    if($dataJson == null) { 
-        echo "Error Receiving The Data";
-        return;
-    }
-
     $status = "";
     $relation = [];
     $id_n_name = [];
+
+    if($dataJson == null || isset($dataJson->data) == false) { 
+        $status = "Error Receiving The Data, you can try to reload the page.";
+        return array($status, $relation, $id_n_name);
+    }
 
     if(count($dataJson->data) == 0) { 
         $status = "No Related anime or manga";
@@ -258,8 +259,8 @@ function getRecommend($id){
     // Close the cURL handle.
     curl_close($ch);
 
-    if($dataJson == null) { 
-        echo "Error Receiving The Data";
+    if($dataJson == null || isset($dataJson->data) == false) { 
+        echo "Error Receiving The Data, you can try to reload the page.";
         return;
     }
 
