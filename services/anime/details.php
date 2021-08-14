@@ -119,7 +119,7 @@
                 </div>
                 <div class="details-content">
                     <h4 class="gallery-title"><span class="gallery-border-bot">Synopsis</span></h4>
-                    <div class="synopsis" style="padding-top: 1px;">
+                    <div class="synopsis" style="padding-top: 0.5px;">
                         <p class="p-justify"><?php echo $synopsis ?></p>
                     </div>
                 </div>
