@@ -26,10 +26,10 @@
             </p>
             <span class="height-smaller">So far the services that we have provided are:</span>
             <ol class="list-left">
-                <li>Movie search, using tmdbapi</li>
                 <li>Anime searching and recommendation, using <a class="link-subtle" href="https://jikan.moe/" target="_blank" rel="noreferrer noopener">Jikan Rest API</a></li>
                 <li>Email Verification, using <a class="link-subtle" href="https://www.abstractapi.com/" target="_blank" rel="noreferrer noopener">Abstractapi</a></li>
                 <li>BBCode Text Editor, using script from <a class="link-subtle" href="https://sceditor.com/" target="_blank" rel="noreferrer noopener">Sceditor</a></li>
+                <li>QR Code Maker, using <a class="link-subtle" href="https://goqr.me/api/" target="_blank" rel="noreferrer noopener">Goqr API</a></li>
                 <li>More to come...</li>
             </ol>
         </div>

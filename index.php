@@ -15,18 +15,10 @@
 
     <h1 class="gap-top"></h1>
     <div class="content">
-        <h1 class="margin-top">Browse Around The Web</h1>
+        <h1 class="margin-top" id="body">Browse Around The Web</h1>
         <div class="container-main">
-            <a href="services/movie/search">
-                <figure class="menu-item">
-                    <div class="rectangle">
-                        <img src="handler/img/tmdb.png" alt="TMBD" />
-                    </div>
-                    <figcaption class="caption">Search for Movie</figcaption>
-                </figure>
-            </a>
             <div class="dropdown">
-                <a onclick="return openlinkAnime()" href="services/anime/">
+                <a onclick="return openLinkOnMobile()" href="services/anime/">
                     <figure class="menu-item">
                         <div class="rectangle">
                             <img src="handler/img/mal.png" alt="MAL" />
@@ -57,11 +49,19 @@
                     <figcaption class="caption">BBCode Editor</figcaption>
                 </figure>
             </a>
+            <a href="services/qr/create">
+                <figure class="menu-item">
+                    <div class="rectangle">
+                            <img src="handler/img/qr.png" alt="QR Code" />
+                        </div>
+                    <figcaption class="caption">QR Code Maker</figcaption>
+                </figure>
+            </a>
         </div>
     </div>
 
     <script>
-        function openlinkAnime(){
+        function openLinkOnMobile(){
             if(getScreenWidth() < 700) {
                 return false;
             } else {
