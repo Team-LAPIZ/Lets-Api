@@ -54,8 +54,7 @@
                 saveAs(imagePath, fileName + " QR Code.jpg");
             });
             function getFileName(str) {
-                var name = str.substring(str.lastIndexOf("/") + 1);
-                name = name.replace("?size=500x500&data=", "");
+                var name = str.replace("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=", "");
                 return name;
             }
             </script>
