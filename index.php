@@ -57,6 +57,14 @@
                     <figcaption class="caption">QR Code Maker</figcaption>
                 </figure>
             </a>
+            <a href="services/yt/thumbnail">
+                <figure class="menu-item">
+                    <div class="rectangle">
+                            <img src="handler/img/yt.png" alt="Youtube Logo" />
+                        </div>
+                    <figcaption class="caption">Get Youtube Thumbnail</figcaption>
+                </figure>
+            </a>
         </div>
     </div>
 

@@ -35,7 +35,7 @@
                 <h4 style=\"margin: 10px;\">QR code created with the content</h4>
             </div>
             <div class=\"qr-text\">
-                <p class=\"p-justify\" style=\"margin-top: 0px;\">{$data}</p>
+                <p class=\"p-centered\" style=\"margin-top: 0px;\">{$data}</p>
             </div>
             <div class=\"service-container\">
                 <h4 style=\"margin: 10px;\">Save Img as JPG</h4>

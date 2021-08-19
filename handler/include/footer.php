@@ -8,6 +8,7 @@ function footerImport($dirToPage, $apiFrom = "") {
 
     echo "
     <script src=\"/handler/script/enableTooltips.js\"></script>
+    <script src=\"/handler/script/flickity.pkgd.js\"></script>
     <div class = \"gap\"></div>
     ";
 
